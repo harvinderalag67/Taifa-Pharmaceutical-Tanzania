@@ -236,26 +236,114 @@ section {
 
 
 /* ==========================================================
-   8. HEADER
+   HEADER
 ========================================================== */
 
-header {
+.top-bar {
 
-    width: 100%;
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
 
 }
 
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
 
 /* ==========================================================
-   9. NAVIGATION
+   NAVIGATION
 ========================================================== */
 
-nav {
+#navbar {
 
-    width: 100%;
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
 
 }
 
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 65px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
 
 /* ==========================================================
    10. CARDS
