@@ -1,0 +1,1109 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   PART 1 — NEWS HERO
+========================================================== */
+
+#news-hero {
+
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--primary);
+
+}
+
+
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
+
+.news-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+}
+
+
+.news-hero-background img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+/* ==========================================================
+   HERO OVERLAY
+========================================================== */
+
+.news-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(7, 31, 52, 0.93) 0%,
+            rgba(7, 31, 52, 0.78) 45%,
+            rgba(7, 31, 52, 0.38) 75%,
+            rgba(7, 31, 52, 0.18) 100%);
+
+}
+
+
+/* ==========================================================
+   HERO CONTENT
+========================================================== */
+
+.news-hero-section .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.news-hero-content {
+
+    max-width: 700px;
+
+    padding: 90px 0;
+
+}
+
+
+/* ==========================================================
+   HERO BADGE
+========================================================== */
+
+.news-hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 42px;
+
+    margin-bottom: 22px;
+
+    padding: 0 16px;
+
+    border-left: 4px solid var(--accent);
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+/* ==========================================================
+   HERO HEADING
+========================================================== */
+
+.news-hero-content h1 {
+
+    margin: 0 0 20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.6rem, 5vw, 4rem);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   HERO DESCRIPTION
+========================================================== */
+
+.news-hero-content p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    #news-hero {
+
+        min-height: 440px;
+
+    }
+
+    .news-hero-content {
+
+        padding: 75px 0;
+
+    }
+
+    .news-hero-content h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #news-hero {
+
+        min-height: 460px;
+
+    }
+
+    .news-hero-background img {
+
+        object-position: 60% center;
+
+    }
+
+    .news-hero-overlay {
+
+        background:
+            linear-gradient(90deg,
+                rgba(7, 31, 52, 0.94) 0%,
+                rgba(7, 31, 52, 0.80) 100%);
+
+    }
+
+    .news-hero-content {
+
+        padding: 65px 0;
+
+    }
+
+    .news-hero-badge {
+
+        min-height: 38px;
+
+        margin-bottom: 18px;
+
+        padding: 0 13px;
+
+        font-size: 0.61rem;
+
+    }
+
+    .news-hero-content h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .news-hero-content p {
+
+        font-size: 0.86rem;
+
+        line-height: 1.7;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 2 — LATEST UPDATES
+========================================================== */
+
+#latest-updates {
+
+    padding: 82px 0 88px;
+
+    background: #FFFFFF;
+
+}
+
+
+/* ==========================================================
+   SECTION HEADER
+========================================================== */
+
+.latest-updates-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 38px;
+
+    text-align: center;
+
+}
+
+
+.latest-updates-header .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+}
+
+
+.latest-updates-header h2 {
+
+    margin: 0 0 18px;
+
+    color: #0B2E4F;
+
+    font-size: clamp(2.1rem, 4vw, 3rem);
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+}
+
+
+.latest-updates-header p {
+
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: #647482;
+
+    font-size: 0.94rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   NEWS CATEGORY STRIP
+========================================================== */
+
+.news-category-strip {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 42px;
+
+}
+
+
+.news-category {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #DCE4EA;
+
+    border-radius: 5px;
+
+    background: #F7F9FC;
+
+    color: #60717F;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.03em;
+
+}
+
+
+.news-category.active {
+
+    background: #1E4E8C;
+
+    border-color: #1E4E8C;
+
+    color: #FFFFFF;
+
+}
+
+
+/* ==========================================================
+   NEWS EMPTY STATE
+========================================================== */
+
+.news-empty-state {
+
+    max-width: 850px;
+
+    min-height: 275px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto;
+
+    padding: 45px 40px;
+
+    text-align: center;
+
+    background: #F7F9FC;
+
+    border: 1px solid #E1E7ED;
+
+    border-top: 4px solid var(--accent);
+
+    border-radius: 10px;
+
+}
+
+
+/* ==========================================================
+   EMPTY STATE ICON
+========================================================== */
+
+.news-empty-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #D7E0E7;
+
+    border-radius: 50%;
+
+    background: #FFFFFF;
+
+}
+
+
+.news-empty-icon span {
+
+    color: var(--secondary);
+
+    font-size: 1.5rem;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+}
+
+
+/* ==========================================================
+   EMPTY STATE CONTENT
+========================================================== */
+
+.news-empty-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #7A8996;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.news-empty-state h3 {
+
+    margin: 0 0 13px;
+
+    color: #0B2E4F;
+
+    font-size: 1.4rem;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+}
+
+
+.news-empty-state p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #657482;
+
+    font-size: 0.87rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    #latest-updates {
+
+        padding: 68px 0 70px;
+
+    }
+
+    .latest-updates-header {
+
+        margin-bottom: 32px;
+
+    }
+
+    .news-category-strip {
+
+        margin-bottom: 32px;
+
+    }
+
+    .news-empty-state {
+
+        min-height: 250px;
+
+        padding: 38px 28px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #latest-updates {
+
+        padding: 58px 0 60px;
+
+    }
+
+    .latest-updates-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .latest-updates-header p {
+
+        font-size: 0.86rem;
+
+    }
+
+    .news-category-strip {
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 6px;
+
+        scrollbar-width: thin;
+
+    }
+
+    .news-category {
+
+        flex: 0 0 auto;
+
+        min-height: 36px;
+
+        padding: 0 13px;
+
+    }
+
+    .news-empty-state {
+
+        min-height: 230px;
+
+        padding: 32px 22px;
+
+    }
+
+    .news-empty-state h3 {
+
+        font-size: 1.2rem;
+
+    }
+
+    .news-empty-state p {
+
+        font-size: 0.83rem;
+
+    }
+
+}
+
+/* ==========================================================
+   NEWS CATEGORY STRIP — UNIFORM BLUE
+========================================================== */
+
+.news-category {
+
+    background: #1E4E8C;
+
+    border-color: #1E4E8C;
+
+    color: #FFFFFF;
+
+}
+
+.news-category.active {
+
+    background: #1E4E8C;
+
+    border-color: #1E4E8C;
+
+    color: #FFFFFF;
+
+}

@@ -2,7 +2,11 @@
    TAIFA PHARMACEUTICAL TANZANIA LTD.
    Responsive Stylesheet
 
-   Version : 1.0
+   Version : 1.1
+
+   Cleanup:
+   - removed accidental nested media-query wrappers
+   - preserved all responsive property values
    ========================================================== */
 
 
@@ -189,19 +193,35 @@
 
 /* ==========================================================
    HERO SECTION
+   Hero v2.0 Responsive
 ========================================================== */
 
-@media screen and (max-width:768px) {
 
-    .hero-content {
+/*----------------------------------------------------------
+TABLETS
+----------------------------------------------------------*/
 
-        text-align: center;
+@media screen and (max-width:992px) {
+
+    #hero {
+
+        min-height: 90vh;
+
+        padding: 80px 0 60px;
 
     }
 
-    .hero-logo {
+    #hero::before {
 
-        margin: 0 auto 25px;
+        background-size: 105% auto;
+
+        background-position: 65% center;
+
+    }
+
+    .hero-content {
+
+        max-width: 520px;
 
     }
 
@@ -213,7 +233,72 @@
 
     .hero-content p {
 
-        font-size: 1rem;
+        font-size: 1.05rem;
+
+    }
+
+}
+
+
+/*----------------------------------------------------------
+SMALL TABLETS
+----------------------------------------------------------*/
+
+@media screen and (max-width:768px) {
+
+    #hero {
+
+        min-height: auto;
+
+        padding: 80px 0;
+
+    }
+
+    #hero::before {
+
+        background-size: cover;
+
+        background-position: center;
+
+    }
+
+    #hero::after {
+
+        background: linear-gradient(rgba(11, 46, 79, .82),
+
+                rgba(11, 46, 79, .82));
+
+    }
+
+    .hero-content {
+
+        max-width: 100%;
+
+        text-align: center;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .hero-content p {
+
+        max-width: 100%;
+
+        text-align: center;
+
+    }
+
+    .hero-badges {
+
+        width: 100%;
+
+        max-width: 420px;
+
+        margin: 35px auto;
 
     }
 
@@ -221,10 +306,2724 @@
 
         flex-direction: column;
 
+        width: 100%;
+
+        margin-top: 10px;
+
+    }
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+        max-width: 420px;
+
+    }
+
+}
+
+
+/*----------------------------------------------------------
+MOBILE
+----------------------------------------------------------*/
+
+@media screen and (max-width:576px) {
+
+    #hero {
+
+        padding: 70px 0;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 2rem;
+
+        line-height: 1.15;
+
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+
+    }
+
+    .hero-badge {
+
+        padding: 15px;
+
+    }
+
+    .badge-icon {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
+
+}
+
+
+/*----------------------------------------------------------
+SMALL MOBILE
+----------------------------------------------------------*/
+
+@media screen and (max-width:400px) {
+
+    .hero-content h1 {
+
+        font-size: 1.75rem;
+
+    }
+
+    .hero-badge span {
+
+        font-size: .85rem;
+
+    }
+
+}
+
+
+/*==========================================================
+  COMPANY OVERVIEW
+==========================================================*/
+
+@media (max-width:992px) {
+
+    .company-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+    .company-content {
+
+        max-width: 100%;
+
+    }
+
+    .company-highlights {
+
+        margin-top: 0;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .highlight-card {
+
+        padding: 24px;
+
+    }
+
+}
+
+/*==========================================================
+  WHY TANZANIA
+==========================================================*/
+
+@media (max-width:992px) {
+
+    .market-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .advantages-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #why-tanzania {
+
+        padding: 90px 0;
+
+    }
+
+    .subsection-title {
+
+        font-size: 1.7rem;
+
+    }
+
+    .market-card {
+
+        padding: 28px;
+
+    }
+
+    .reason-card {
+
+        padding: 30px;
+
+    }
+
+}
+
+/*==========================================================
+  STRATEGIC CAPITAL
+==========================================================*/
+
+@media (max-width:992px) {
+
+    .capital-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .capital-content,
+    .capital-documents {
+
+        padding: 30px;
+
+    }
+
+    .capital-types {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .capital-type {
+
+        width: 100%;
+
+        max-width: 360px;
+
+        text-align: center;
+
+    }
+
+}
+
+/*==========================================================
+  CLOSING STATEMENT
+==========================================================*/
+
+@media (max-width:768px) {
+
+    #closing-statement {
+
+        padding: 90px 0;
+
+    }
+
+    .closing-content h2 {
+
+        font-size: 2rem;
+
     }
 
 }
 
 /* ==========================================================
-   END OF FILE
+   ABOUT PAGE RESPONSIVE
 ========================================================== */
+
+/*----------------------------------------------------------
+TABLETS
+----------------------------------------------------------*/
+
+@media screen and (max-width:992px) {
+
+    .about-hero-grid,
+    .who-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-hero-content,
+    .who-content {
+        text-align: center;
+    }
+
+    .about-hero-content p,
+    .who-content p {
+        text-align: left;
+    }
+
+    .about-hero-image {
+        order: -1;
+    }
+
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .governance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .responsibility-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/*----------------------------------------------------------
+MOBILE
+----------------------------------------------------------*/
+
+@media screen and (max-width:768px) {
+
+    #about-hero {
+        padding: 70px 0;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .about-hero-buttons {
+        flex-direction: column;
+    }
+
+    .about-hero-buttons .btn {
+        width: 100%;
+    }
+
+    .leadership-grid,
+    .governance-grid,
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-card img {
+        width: 160px;
+        height: 200px;
+        border-radius: 18px;
+    }
+
+}
+
+
+/*----------------------------------------------------------
+SMALL MOBILE
+----------------------------------------------------------*/
+
+@media screen and (max-width:576px) {
+
+    .about-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1rem;
+    }
+
+    .who-content h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/*==========================================================
+  OUR STORY
+==========================================================*/
+
+@media (max-width:992px) {
+
+    .story-grid {
+
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+    }
+
+}
+
+/* ==========================================================
+   MANUFACTURING PAGE
+   PART 1 RESPONSIVE
+=========================================================== */
+
+@media (max-width: 1100px) {
+
+    #manufacturing-hero {
+        min-height: 700px;
+    }
+
+    .manufacturing-hero-container {
+        min-height: 700px;
+    }
+
+    .manufacturing-vision-grid {
+        gap: 55px;
+    }
+
+    .vision-image {
+        min-height: 580px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    #manufacturing-hero {
+        min-height: 680px;
+    }
+
+    .manufacturing-hero-container {
+        min-height: 680px;
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .manufacturing-hero-content h1 {
+        font-size: clamp(3rem, 8vw, 4.8rem);
+    }
+
+    .manufacturing-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .manufacturing-vision-content {
+        max-width: none;
+    }
+
+    .vision-image {
+        min-height: 520px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    #manufacturing-hero {
+        min-height: 680px;
+    }
+
+    .manufacturing-hero-container {
+        min-height: 680px;
+        justify-content: center;
+
+        padding-top: 85px;
+        padding-bottom: 105px;
+    }
+
+    .manufacturing-hero-image {
+        object-position: 62% center;
+    }
+
+    .manufacturing-hero-overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(6, 24, 42, 0.94) 0%,
+                rgba(6, 24, 42, 0.78) 55%,
+                rgba(6, 24, 42, 0.48) 100%);
+    }
+
+    .manufacturing-hero-grid {
+        background-size: 48px 48px;
+    }
+
+    .manufacturing-hero-content h1 {
+        margin-bottom: 22px;
+        font-size: clamp(2.65rem, 12vw, 4rem);
+        line-height: 1.04;
+    }
+
+    .manufacturing-hero-intro {
+        margin-bottom: 30px;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .manufacturing-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .manufacturing-hero-actions .btn {
+        width: 100%;
+    }
+
+    /* Manufacturing Hero status card */
+
+    .manufacturing-hero-status {
+
+        width: auto;
+        margin-top: 26px;
+        padding: 14px 16px 14px 14px;
+    }
+
+    .hero-status-accent {
+        min-height: 38px;
+        margin-right: 14px;
+    }
+
+    .hero-status-label {
+        font-size: 0.66rem;
+    }
+
+    .hero-status-text {
+        font-size: 0.76rem;
+        line-height: 1.5;
+    }
+
+    #manufacturing-vision {
+        padding: 80px 0;
+    }
+
+    .vision-image {
+        min-height: 420px;
+    }
+
+    .vision-image-caption {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 36px;
+        padding: 14px 15px;
+    }
+
+    .vision-caption-text {
+        font-size: 0.78rem;
+    }
+
+    .manufacturing-vision-content h2 {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+
+    .manufacturing-vision-content .vision-lead {
+        font-size: 1.02rem;
+    }
+
+    .vision-principle {
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        padding: 18px 0;
+    }
+
+}
+
+/* ==========================================================
+   PART 2 — BIRD'S-EYE MASTER PLAN — TABLET
+=========================================================== */
+
+@media (max-width: 992px) {
+
+    #master-plan {
+        padding: 90px 0 100px;
+    }
+
+    .master-plan-information {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin-top: 60px;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 2 — BIRD'S-EYE MASTER PLAN — MOBILE
+=========================================================== */
+
+@media (max-width: 640px) {
+
+    #master-plan {
+        padding: 75px 0 80px;
+    }
+
+    .master-plan-header {
+        margin-bottom: 35px;
+    }
+
+    .master-plan-header h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .master-plan-header p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .master-plan-visual {
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .master-plan-image {
+        border-radius: 8px;
+    }
+
+    .master-plan-information {
+        gap: 35px;
+        margin-top: 45px;
+    }
+
+    .master-plan-intro h3 {
+        font-size: 1.7rem;
+    }
+
+    .master-plan-feature {
+        grid-template-columns: 44px 1fr;
+        gap: 14px;
+
+        padding: 20px 0;
+    }
+
+    .master-plan-feature-number {
+        width: 36px;
+        height: 36px;
+
+        font-size: 0.7rem;
+    }
+
+    .master-plan-feature h4 {
+        font-size: 1rem;
+    }
+
+    .master-plan-feature p {
+        font-size: 0.88rem;
+        line-height: 1.7;
+    }
+
+}
+
+/* ==========================================================
+   PART 3 — PRODUCTION BLOCKS — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .production-blocks-section {
+        padding: 90px 0 100px;
+    }
+
+    .production-blocks-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 3 — PRODUCTION BLOCKS — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    /* ==========================================================
+       PART 3 — PRODUCTION BLOCKS — MOBILE
+    ========================================================== */
+
+    .production-blocks-section {
+        padding: 75px 0 80px;
+    }
+
+    .production-blocks-header {
+        margin-bottom: 35px;
+    }
+
+    .production-blocks-header h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .production-blocks-header p {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .production-blocks-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .production-block-number {
+        top: 14px;
+        left: 14px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 0.68rem;
+    }
+
+    .production-block-content {
+        padding: 24px 20px;
+    }
+
+    .production-block-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .production-block-content p {
+        font-size: 0.88rem;
+        line-height: 1.7;
+    }
+
+    /* Other existing Manufacturing mobile rules
+       continue below this point */
+    .facility-flythrough {
+        margin-bottom: 55px;
+
+        border-radius: 12px;
+    }
+
+    .facility-flythrough-media {
+        min-height: 380px;
+    }
+
+    .facility-video {
+        height: 380px;
+    }
+
+    .facility-video-overlay {
+        padding: 55px 22px 24px;
+    }
+
+    .facility-video-overlay h3 {
+        font-size: 1.45rem;
+    }
+
+    .facility-video-overlay p {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+}
+
+/* ==========================================================
+   PART 4 — UTILITIES & INFRASTRUCTURE — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .utilities-section {
+        padding: 90px 0 100px;
+    }
+
+    .utilities-header {
+        margin-bottom: 45px;
+    }
+
+    .utilities-grid {
+        gap: 20px;
+    }
+
+    .utility-card {
+        padding: 26px;
+    }
+
+    .site-movement-block {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-top: 75px;
+
+        padding: 40px;
+    }
+}
+
+
+/* ==========================================================
+   PART 4 — UTILITIES & INFRASTRUCTURE — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .utilities-section {
+        padding: 75px 0 80px;
+    }
+
+    .utilities-header {
+        margin-bottom: 35px;
+    }
+
+    .utilities-header h2 {
+        font-size: 2rem;
+    }
+
+    .utilities-header p {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .utilities-masterplan {
+        border-radius: 12px;
+    }
+
+    .utilities-masterplan-caption {
+        display: block;
+        padding: 20px;
+    }
+
+    .utilities-masterplan-caption span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .utilities-masterplan-caption p {
+        font-size: 0.88rem;
+    }
+
+    .utilities-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-top: 45px;
+    }
+
+    .utility-card {
+        grid-template-columns: 46px 1fr;
+
+        gap: 16px;
+
+        min-height: auto;
+
+        padding: 24px 20px;
+    }
+
+    .utility-card-number {
+        width: 40px;
+        height: 40px;
+
+        font-size: 0.68rem;
+    }
+
+    .utility-card h3 {
+        font-size: 1.08rem;
+    }
+
+    .utility-card p {
+        font-size: 0.88rem;
+        line-height: 1.7;
+    }
+
+    .site-movement-block {
+        gap: 28px;
+
+        margin-top: 60px;
+
+        padding: 28px 20px;
+
+        border-radius: 12px;
+    }
+
+    .site-movement-content h3 {
+        font-size: 1.65rem;
+    }
+
+    .site-movement-content p {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* ==========================================================
+   PART 5 — TECHNOLOGY & FUTURE GROWTH — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .technology-future-section {
+        padding: 90px 0 100px;
+    }
+
+    .technology-showcase {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 40px;
+    }
+
+    .technology-showcase-visual {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .technology-principles {
+        gap: 18px;
+    }
+
+    .future-growth {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-top: 80px;
+
+        padding-top: 75px;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 5 — TECHNOLOGY & FUTURE GROWTH — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .technology-future-section {
+        padding: 75px 0 80px;
+    }
+
+    .technology-header {
+        margin-bottom: 40px;
+    }
+
+    .technology-header h2 {
+        font-size: 2rem;
+    }
+
+    .technology-header p {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .technology-showcase {
+        gap: 30px;
+
+        padding: 28px 20px;
+
+        border-radius: 12px;
+    }
+
+    .technology-showcase-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .technology-showcase-content p {
+        font-size: 0.9rem;
+    }
+
+    .technology-showcase-visual {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .technology-equipment-card {
+        min-height: 220px;
+    }
+
+    .technology-equipment-card img {
+        min-height: 220px;
+    }
+
+    .technology-principles {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-top: 40px;
+    }
+
+    .technology-principle-card {
+        padding: 25px 20px;
+    }
+
+    .future-growth {
+        gap: 35px;
+
+        margin-top: 65px;
+
+        padding-top: 60px;
+    }
+
+    .future-growth-visual {
+        min-height: 320px;
+
+        padding: 20px;
+    }
+
+    .future-growth-frame {
+        height: 280px;
+    }
+
+    .future-growth-marker {
+        font-size: 0.54rem;
+        letter-spacing: 0.08em;
+    }
+
+    .future-growth-content h3 {
+        font-size: 1.75rem;
+    }
+
+    .future-growth-content p {
+        font-size: 0.9rem;
+    }
+
+    .future-growth-note {
+        font-size: 0.58rem;
+        letter-spacing: 0.09em;
+    }
+
+}
+
+/* ==========================================================
+   PART 6 — MANUFACTURING CTA — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .manufacturing-cta-section {
+        padding: 90px 0 95px;
+    }
+
+    .manufacturing-cta-content {
+        max-width: 760px;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 6 — MANUFACTURING CTA — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .manufacturing-cta-section {
+        padding: 75px 0 80px;
+    }
+
+    .manufacturing-cta-content {
+        padding: 0 10px;
+    }
+
+    .manufacturing-cta-content h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .manufacturing-cta-content p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .manufacturing-cta-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .manufacturing-cta-actions .btn {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================================
+   PART 1 — PRODUCTS HERO — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .products-hero-section {
+        min-height: auto;
+    }
+
+    .products-hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .products-hero-content {
+        max-width: 760px;
+    }
+
+    .products-hero-visual {
+        min-height: auto;
+    }
+
+    .products-hero-status {
+        left: 25px;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 1 — PRODUCTS HERO — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .products-hero-container {
+        gap: 35px;
+
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+
+    .products-hero-content h1 {
+        font-size: 2.35rem;
+
+        line-height: 1.15;
+    }
+
+    .products-hero-intro {
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+    }
+
+    .products-hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .products-hero-actions .btn {
+        width: 100%;
+    }
+
+    .products-hero-image img {
+        height: 300px;
+    }
+
+    .products-hero-status {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: -25px;
+    }
+
+    .products-hero-status .hero-status-content {
+        padding: 17px 19px;
+    }
+
+}
+
+/* ==========================================================
+   PART 2 — PRODUCTS PORTFOLIO — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .product-portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-capability-highlight {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .product-capability-content {
+        padding: 38px 32px 20px;
+    }
+
+    .product-capability-icons {
+        justify-content: flex-start;
+
+        padding: 10px 32px 35px;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 2 — PRODUCTS PORTFOLIO — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .product-portfolio-section {
+        padding: 75px 0 80px;
+    }
+
+    .product-portfolio-header {
+        margin-bottom: 38px;
+    }
+
+    .product-portfolio-header h2 {
+        font-size: 2rem;
+    }
+
+    .product-portfolio-header p {
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+    }
+
+    .product-portfolio-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .product-card-top {
+        padding: 22px 21px 12px;
+    }
+
+    .product-card-content {
+        padding: 8px 21px 25px;
+    }
+
+    .product-card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-card-group ul {
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+    }
+
+    .product-capability-highlight {
+        margin-top: 38px;
+    }
+
+    .product-capability-content {
+        padding: 32px 22px 18px;
+    }
+
+    .product-capability-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-capability-icons {
+        gap: 18px;
+
+        padding: 10px 22px 28px;
+    }
+
+    .product-capability-icon {
+        min-width: 90px;
+    }
+
+    .product-portfolio-section,
+    .therapeutic-areas-section,
+    .product-manufacturing-section,
+    .future-product-section {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+}
+
+/* ==========================================================
+   PART 3 — THERAPEUTIC AREAS — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .therapeutic-areas-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================================
+   PART 3 — THERAPEUTIC AREAS — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .therapeutic-areas-section {
+        padding: 75px 0 80px;
+    }
+
+    .therapeutic-areas-header {
+        margin-bottom: 38px;
+    }
+
+    .therapeutic-areas-header h2 {
+        font-size: 2rem;
+    }
+
+    .therapeutic-areas-header p {
+        font-size: 0.91rem;
+
+        line-height: 1.7;
+    }
+
+    .therapeutic-areas-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .therapeutic-area-card {
+        min-height: auto;
+
+        padding: 21px 19px;
+
+        gap: 15px;
+    }
+
+    .therapeutic-area-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .therapeutic-area-icon img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .therapeutic-area-content h3 {
+        font-size: 0.98rem;
+    }
+
+    .therapeutic-area-content p {
+        font-size: 0.76rem;
+    }
+
+}
+
+/* ==========================================================
+   PART 4 — MANUFACTURING CAPABILITY — TABLET
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .product-manufacturing-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .product-manufacturing-section {
+        padding: 75px 0 80px;
+    }
+
+    .product-manufacturing-header {
+        margin-bottom: 38px;
+    }
+
+    .product-manufacturing-header h2 {
+        font-size: 2rem;
+    }
+
+    .product-manufacturing-header p {
+        font-size: 0.91rem;
+    }
+
+    .product-manufacturing-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .product-manufacturing-card {
+        min-height: auto;
+
+        padding: 22px 20px;
+    }
+
+    .product-manufacturing-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .product-manufacturing-card p {
+        font-size: 0.77rem;
+    }
+
+    .product-manufacturing-link {
+        margin-top: 35px;
+    }
+
+    .product-manufacturing-link .btn {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================================
+   PART 5 — FUTURE PRODUCT DEVELOPMENT — TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .future-product-roadmap {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .future-product-roadmap::before {
+        display: none;
+    }
+
+    .future-product-card:last-child {
+        grid-column: 1 / -1;
+
+        max-width: calc(50% - 12px);
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* ==========================================================
+   PART 5 — FUTURE PRODUCT DEVELOPMENT — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .future-product-section {
+        padding: 75px 0 80px;
+    }
+
+    .future-product-header {
+        margin-bottom: 38px;
+    }
+
+    .future-product-header h2 {
+        font-size: 2rem;
+    }
+
+    .future-product-header p {
+        font-size: 0.91rem;
+
+        line-height: 1.7;
+    }
+
+    .future-product-roadmap {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .future-product-card:last-child {
+        grid-column: auto;
+
+        max-width: none;
+    }
+
+    .future-product-card {
+        min-height: auto;
+
+        padding: 23px 20px 24px;
+    }
+
+    .future-product-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .future-product-card p {
+        font-size: 0.79rem;
+    }
+
+    .future-product-statement {
+        margin-top: 38px;
+    }
+
+    .future-product-statement-content {
+        padding: 28px 21px;
+    }
+
+    .future-product-statement-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .future-product-statement-content p {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* ==========================================================
+   PART 7 — PRODUCTS CTA — MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+
+    .products-cta-section {
+        padding: 75px 0 80px;
+    }
+
+    .products-cta-content h2 {
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+    .products-cta-content p {
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+    .products-cta-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-top: 28px;
+    }
+
+    .products-cta-actions .btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+/* ==========================================================
+   QUALITY HERO — TABLET
+=========================================================== */
+
+@media screen and (max-width: 992px) {
+
+    .quality-hero-section {
+
+        min-height: 700px;
+
+    }
+
+
+    .quality-hero-container {
+
+        min-height: 700px;
+
+        padding-top: 80px;
+
+        padding-bottom: 155px;
+
+    }
+
+
+    .quality-hero-content {
+
+        max-width: 560px;
+
+    }
+
+
+    .quality-hero-content h1 {
+
+        font-size: clamp(2.7rem, 6vw, 3.8rem);
+
+    }
+
+
+    .quality-hero-intro {
+
+        max-width: 500px;
+
+    }
+
+
+    .quality-hero-status {
+
+        width: 82%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   QUALITY HERO — MOBILE
+=========================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .quality-hero-section {
+
+        min-height: auto;
+
+    }
+
+
+    .quality-hero-overlay {
+
+        background:
+            linear-gradient(180deg,
+                rgba(5, 25, 44, 0.91) 0%,
+                rgba(7, 35, 59, 0.87) 55%,
+                rgba(7, 35, 59, 0.76) 100%);
+
+    }
+
+
+    .quality-hero-container {
+
+        min-height: auto;
+
+        display: flex;
+
+        align-items: flex-start;
+
+        padding-top: 75px;
+
+        padding-bottom: 235px;
+
+    }
+
+
+    .quality-hero-content {
+
+        max-width: 100%;
+
+        text-align: left;
+
+    }
+
+
+    .quality-hero-gold-line {
+
+        width: 220px;
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .quality-hero-content h1 {
+
+        font-size: 2.55rem;
+
+        line-height: 1.1;
+
+    }
+
+
+    .quality-hero-intro {
+
+        max-width: 100%;
+
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .quality-hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        width: 100%;
+
+        max-width: 360px;
+
+    }
+
+
+    .quality-hero-actions .btn {
+
+        width: 100%;
+
+    }
+
+
+    .quality-hero-status {
+
+        left: 3%;
+
+        right: 3%;
+
+        bottom: 25px;
+
+        width: auto;
+
+        max-width: none;
+
+        padding: 16px 15px 17px;
+
+    }
+
+
+    .quality-status-steps {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 16px 10px;
+
+    }
+
+
+    .quality-status-arrow {
+
+        display: none;
+
+    }
+
+
+    .quality-status-step {
+
+        gap: 8px;
+
+    }
+
+
+    .quality-status-icon {
+
+        width: 32px;
+
+        height: 32px;
+
+        flex-basis: 32px;
+
+    }
+
+
+    .quality-status-icon svg {
+
+        width: 24px;
+
+        height: 24px;
+
+    }
+
+
+    .quality-status-step span {
+
+        font-size: 0.72rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   QUALITY HERO — SMALL MOBILE
+=========================================================== */
+
+@media screen and (max-width: 480px) {
+
+    .quality-hero-container {
+
+        padding-top: 65px;
+
+        padding-bottom: 245px;
+
+    }
+
+
+    .quality-hero-label {
+
+        font-size: 0.68rem;
+
+    }
+
+
+    .quality-hero-gold-line {
+
+        width: 180px;
+
+        margin-top: 11px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .quality-hero-content h1 {
+
+        font-size: 2.05rem;
+
+        line-height: 1.12;
+
+    }
+
+
+    .quality-hero-intro {
+
+        font-size: 0.86rem;
+
+    }
+
+
+    .quality-hero-status {
+
+        left: 4%;
+
+        right: 4%;
+
+        bottom: 18px;
+
+        padding: 14px 13px 15px;
+
+    }
+
+
+    .quality-status-heading {
+
+        font-size: 0.61rem;
+
+    }
+
+
+    .quality-status-steps {
+
+        gap: 14px 7px;
+
+    }
+
+
+    .quality-status-step span {
+
+        font-size: 0.66rem;
+
+    }
+
+}
+
+/* ==========================================================
+   QUALITY PHILOSOPHY — TABLET
+========================================================== */
+
+@media screen and (max-width: 992px) {
+
+    .quality-philosophy-section {
+
+        padding: 80px 0 85px;
+
+    }
+
+
+    .quality-philosophy-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+    }
+
+
+    .quality-philosophy-content {
+
+        max-width: 760px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   QUALITY PHILOSOPHY — MOBILE
+========================================================== */
+
+@media screen and (max-width: 640px) {
+
+    .quality-philosophy-section {
+
+        padding: 60px 0 65px;
+
+    }
+
+
+    .quality-philosophy-grid {
+
+        gap: 40px;
+
+    }
+
+
+    .quality-philosophy-content h2 {
+
+        font-size: 2rem;
+
+        line-height: 1.18;
+
+    }
+
+
+    .quality-philosophy-lead {
+
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .quality-philosophy-content p:not(.quality-philosophy-lead) {
+
+        font-size: 0.87rem;
+
+        line-height: 1.75;
+
+    }
+
+
+    .quality-philosophy-principle {
+
+        grid-template-columns: 42px 1fr;
+
+        gap: 14px;
+
+        padding: 21px 0;
+
+    }
+
+
+    .quality-philosophy-number {
+
+        font-size: 0.62rem;
+
+    }
+
+
+    .quality-philosophy-principle-content h3 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .quality-philosophy-principle-content p {
+
+        font-size: 0.78rem;
+
+        line-height: 1.65;
+
+    }
+
+
+    .quality-philosophy-statement {
+
+        margin-top: 42px;
+
+    }
+
+
+    .quality-philosophy-statement-content {
+
+        padding: 24px 20px;
+
+    }
+
+
+    .quality-philosophy-statement-content h3 {
+
+        font-size: 1.08rem;
+
+        line-height: 1.45;
+
+        white-space: normal;
+    }
+
+}
+
+/* ==========================================================
+   PART 3 — QUALITY MANAGEMENT SYSTEM — RESPONSIVE
+========================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .quality-systems-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .quality-systems-section {
+        padding: 60px 0 65px;
+    }
+
+    .quality-systems-header {
+        margin-bottom: 32px;
+    }
+
+    .quality-systems-header h2 {
+        font-size: 2rem;
+    }
+
+    .quality-systems-header p {
+        font-size: 0.85rem;
+    }
+
+    .quality-systems-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-system-item {
+        min-height: auto;
+
+        padding: 23px 20px;
+    }
+
+}
+
+/* ==========================================================
+   PART 4 — QUALITY CONTROL — RESPONSIVE
+=========================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .quality-control-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .quality-control-section {
+
+        padding: 60px 0 65px;
+
+    }
+
+
+    .quality-control-header {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .quality-control-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .quality-control-header p {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .quality-control-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .quality-control-card {
+
+        padding: 25px 21px;
+
+    }
+
+
+    .quality-control-icon {
+
+        width: 52px;
+
+        height: 52px;
+
+        margin-bottom: 17px;
+
+    }
+
+
+    .quality-control-icon svg {
+
+        width: 27px;
+
+        height: 27px;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 5 — QUALIFICATION & VALIDATION — RESPONSIVE
+=========================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    .qualification-pathway {
+
+        gap: 8px;
+
+    }
+
+
+    .qualification-stage {
+
+        flex-basis: 165px;
+
+    }
+
+
+    .qualification-arrow {
+
+        font-size: 1.15rem;
+
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .qualification-validation-section {
+
+        padding: 65px 0 70px;
+
+    }
+
+
+    .qualification-validation-header {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .qualification-validation-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .qualification-validation-header p {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .qualification-pathway {
+
+        display: flex;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 9px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding: 5px 2px 15px;
+
+        scroll-snap-type: x proximity;
+
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+
+    .qualification-stage {
+
+        flex: 0 0 230px;
+
+        min-width: 230px;
+
+        min-height: 245px;
+
+        padding: 22px 18px;
+
+        scroll-snap-align: start;
+
+    }
+
+
+    .qualification-stage-code {
+
+        width: 54px;
+
+        height: 54px;
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .qualification-stage-marker {
+
+        min-height: 54px;
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .qualification-arrow {
+
+        display: flex;
+
+        flex: 0 0 auto;
+
+        height: auto;
+
+        transform: none;
+
+    }
+
+
+    .qualification-stage h3 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .qualification-stage p {
+
+        font-size: 0.78rem;
+
+    }
+
+
+    .qualification-validation-footer {
+
+        width: 100%;
+
+        min-height: 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+        margin-top: 28px;
+
+        padding: 16px 18px;
+
+    }
+
+    .qualification-validation-footer span {
+
+        font-size: 0.68rem;
+
+    }
+
+    .qualification-validation-footer strong {
+
+        font-size: 0.82rem;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 6 — REGULATORY & COMPLIANCE — RESPONSIVE
+=========================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .quality-roadmap-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .quality-roadmap-section {
+
+        padding: 60px 0 65px;
+
+    }
+
+
+    .quality-roadmap-header {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .quality-roadmap-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .quality-roadmap-header p {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .quality-roadmap-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .quality-roadmap-card {
+
+        min-height: auto;
+
+        padding: 24px 20px;
+
+    }
+
+
+    .quality-roadmap-marker {
+
+        min-height: 45px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .quality-roadmap-card h3 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .quality-roadmap-card p {
+
+        font-size: 0.78rem;
+
+    }
+
+
+    .quality-roadmap-footer {
+
+        width: 100%;
+
+        min-height: 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+        margin-top: 25px;
+
+        padding: 16px 18px;
+
+    }
+
+
+    .quality-roadmap-footer span {
+
+        font-size: 0.68rem;
+
+    }
+
+
+    .quality-roadmap-footer strong {
+
+        font-size: 0.82rem;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 7 — DATA INTEGRITY & CONTINUOUS IMPROVEMENT
+   RESPONSIVE
+=========================================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .quality-improvement-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .quality-improvement-section {
+
+        padding: 60px 0 65px;
+
+    }
+
+
+    .quality-improvement-header {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .quality-improvement-header h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .quality-improvement-header p {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .quality-improvement-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .quality-improvement-card {
+
+        min-height: auto;
+
+        padding: 24px 20px;
+
+    }
+
+
+    .quality-improvement-icon {
+        width: 66px;
+        height: 66px;
+    }
+
+
+    .quality-improvement-icon img {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .quality-improvement-card h3 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .quality-improvement-card p {
+
+        font-size: 0.78rem;
+
+    }
+
+
+    .quality-improvement-footer {
+
+        width: 100%;
+
+        min-height: 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+        margin-top: 25px;
+
+        padding: 16px 18px;
+
+    }
+
+
+    .quality-improvement-footer span {
+
+        font-size: 0.68rem;
+
+    }
+
+
+    .quality-improvement-footer strong {
+
+        font-size: 0.82rem;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 8 — QUALITY CTA — RESPONSIVE
+=========================================================== */
+
+@media screen and (max-width: 640px) {
+
+    .quality-cta-section {
+
+        padding: 65px 0 70px;
+
+    }
+
+
+    .quality-cta-content h2 {
+
+        font-size: 2.15rem;
+
+    }
+
+
+    .quality-cta-content p {
+
+        font-size: 0.84rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .quality-cta-actions {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        width: 100%;
+
+        margin-top: 25px;
+
+    }
+
+
+    .quality-cta-primary,
+    .quality-cta-secondary {
+
+        width: 100%;
+
+        min-height: 47px;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 1 — INVESTOR HERO — RESPONSIVE
+========================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .investor-hero-section {
+
+        min-height: 590px;
+
+    }
+
+
+    .investor-hero-content {
+
+        max-width: 100%;
+
+        padding: 80px 0;
+
+    }
+
+
+    .investor-hero-content h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .investor-hero-content p {
+
+        font-size: 0.88rem;
+
+        line-height: 1.7;
+
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .investor-hero-section {
+
+        min-height: 620px;
+
+    }
+
+
+    .investor-hero-background img {
+
+        object-position: 62% center;
+
+    }
+
+
+    .investor-hero-overlay {
+
+        background:
+            linear-gradient(90deg,
+                rgba(7, 31, 52, 0.94) 0%,
+                rgba(7, 31, 52, 0.78) 100%);
+
+    }
+
+
+    .investor-hero-content {
+
+        padding: 70px 0;
+
+    }
+
+
+    .investor-hero-badge {
+
+        min-height: 38px;
+
+        margin-bottom: 20px;
+
+        padding: 0 14px;
+
+        font-size: 0.62rem;
+
+    }
+
+
+    .investor-hero-content h1 {
+
+        font-size: 2.35rem;
+
+        line-height: 1.12;
+
+    }
+
+
+    .investor-hero-content p {
+
+        font-size: 0.84rem;
+
+    }
+
+
+    .investor-hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        margin-top: 26px;
+
+    }
+
+
+    .investor-hero-primary,
+    .investor-hero-secondary {
+
+        width: 100%;
+
+        min-height: 48px;
+
+    }
+
+}
+
+/* ==========================================================
+   FINAL MANUFACTURING PAGE RESPONSIVE SPACING
+========================================================== */
+
+@media (max-width: 992px) {
+
+    #manufacturing-vision {
+        padding: 70px 0;
+    }
+
+    #master-plan,
+    .production-blocks-section,
+    .utilities-section,
+    .technology-future-section {
+        padding: 65px 0 75px;
+    }
+
+    .manufacturing-cta-section {
+        padding: 70px 0 80px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #manufacturing-vision {
+        padding: 60px 0;
+    }
+
+    #master-plan,
+    .production-blocks-section,
+    .utilities-section,
+    .technology-future-section {
+        padding: 55px 0 65px;
+    }
+
+    .manufacturing-cta-section {
+        padding: 60px 0 70px;
+    }
+}

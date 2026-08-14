@@ -1,0 +1,1014 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   CAREERS HERO
+========================================================== */
+
+#careers-hero {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--primary);
+
+}
+
+
+.careers-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+.careers-hero-background img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.careers-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(7, 31, 52, 0.94) 0%,
+            rgba(7, 31, 52, 0.76) 50%,
+            rgba(7, 31, 52, 0.30) 100%);
+
+}
+
+
+.careers-hero-section .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.careers-hero-content {
+
+    max-width: 700px;
+
+    padding: 90px 0;
+
+}
+
+
+.careers-hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 42px;
+
+    margin-bottom: 22px;
+
+    padding: 0 16px;
+
+    border-left: 4px solid var(--accent);
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.careers-hero-content h1 {
+
+    margin: 0 0 20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.6rem, 5vw, 4rem);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+}
+
+
+.careers-hero-content p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   WHY TAIFA
+========================================================== */
+
+#why-taifa {
+
+    padding: 78px 0 82px;
+
+    background: #FFFFFF;
+
+}
+
+
+.why-taifa-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+}
+
+
+.why-taifa-header .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+}
+
+
+.why-taifa-header h2 {
+
+    margin: 0 0 18px;
+
+    color: #0B2E4F;
+
+    font-size: clamp(2.1rem, 4vw, 3rem);
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+}
+
+
+.why-taifa-header p {
+
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: #647482;
+
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+
+}
+
+
+.why-taifa-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.why-taifa-card {
+
+    padding: 30px 27px;
+
+    background: #F7F9FC;
+
+    border: 1px solid #E1E7ED;
+
+    border-top: 4px solid var(--accent);
+
+    border-radius: 9px;
+
+    text-align: center;
+
+}
+
+
+.why-taifa-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D9E2E9;
+
+    border-radius: 8px;
+
+}
+
+
+.why-taifa-icon img {
+
+    width: 43px;
+
+    height: 43px;
+
+    object-fit: contain;
+
+}
+
+
+.why-taifa-card h3 {
+
+    margin: 0 0 11px;
+
+    color: #0B2E4F;
+
+    font-size: 1.25rem;
+
+    font-weight: 600;
+
+}
+
+
+.why-taifa-card p {
+
+    margin: 0;
+
+    color: #657482;
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==========================================================
+   OPPORTUNITIES
+========================================================== */
+
+#career-opportunities {
+
+    padding: 78px 0 82px;
+
+    background: #F7F9FC;
+
+}
+
+
+.career-opportunities-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.career-opportunities-content .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+}
+
+
+.career-opportunities-content h2 {
+
+    margin: 0 0 18px;
+
+    color: #0B2E4F;
+
+    font-size: clamp(2.1rem, 4vw, 3rem);
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+}
+
+
+.career-opportunities-content>p {
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    color: #647482;
+
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+
+}
+
+
+.career-opportunity-tags {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.career-opportunity-tags span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 34px;
+
+    padding: 0 13px;
+
+    border: 1px solid #D7E0E7;
+
+    border-radius: 5px;
+
+    background: #FFFFFF;
+
+    color: #526575;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+}
+
+
+.career-opportunities-note {
+
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    padding: 20px 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E0E6EC;
+
+    border-left: 4px solid var(--accent);
+
+    text-align: left;
+
+}
+
+
+.career-opportunities-note strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #0B2E4F;
+
+    font-size: 0.78rem;
+
+}
+
+
+.career-opportunities-note p {
+
+    margin: 0;
+
+    color: #687987;
+
+    font-size: 0.82rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .why-taifa-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #careers-hero {
+
+        min-height: 460px;
+
+    }
+
+    .careers-hero-content {
+
+        padding: 70px 0;
+
+    }
+
+    .careers-hero-content h1 {
+
+        font-size: 2.35rem;
+
+    }
+
+    .careers-hero-content p {
+
+        font-size: 0.86rem;
+
+    }
+
+    #why-taifa,
+    #career-opportunities {
+
+        padding: 60px 0;
+
+    }
+
+    .why-taifa-header h2,
+    .career-opportunities-content h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .career-opportunity-tags {
+
+        justify-content: flex-start;
+
+    }
+
+}
+
+/* ==========================================================
+   CAREERS — OPPORTUNITY TAGS / BUTTONS
+========================================================== */
+
+.career-opportunity-tags span {
+
+    background: #1E4E8C;
+
+    border-color: #1E4E8C;
+
+    color: #FFFFFF;
+
+}
+
+
+/* Consistent interaction colour */
+
+.career-opportunity-tags span:hover,
+.career-opportunity-tags span:focus,
+.career-opportunity-tags span:active {
+
+    background: #124E78;
+
+    border-color: #124E78;
+
+    color: #FFFFFF;
+
+}

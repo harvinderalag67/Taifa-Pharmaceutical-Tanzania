@@ -1,0 +1,1123 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   PART 1 — CONTACT HERO
+========================================================== */
+
+#contact-hero {
+
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--primary);
+
+}
+
+
+.contact-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+}
+
+
+.contact-hero-background img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.contact-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(7, 31, 52, 0.94) 0%,
+            rgba(7, 31, 52, 0.76) 50%,
+            rgba(7, 31, 52, 0.32) 100%);
+
+}
+
+
+.contact-hero-section .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.contact-hero-content {
+
+    max-width: 700px;
+
+    padding: 80px 0;
+
+}
+
+
+.contact-hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 42px;
+
+    margin-bottom: 21px;
+
+    padding: 0 16px;
+
+    border-left: 4px solid var(--accent);
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.contact-hero-content h1 {
+
+    margin: 0 0 19px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.7rem, 5vw, 4rem);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+}
+
+
+.contact-hero-content p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 0.97rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    #contact-hero {
+
+        min-height: 430px;
+
+    }
+
+    .contact-hero-content {
+
+        padding: 65px 0;
+
+    }
+
+    .contact-hero-content h1 {
+
+        font-size: 2.35rem;
+
+    }
+
+    .contact-hero-content p {
+
+        font-size: 0.86rem;
+
+    }
+
+}
+
+/* ==========================================================
+   PART 2 — CONTACT & ENQUIRIES
+========================================================== */
+
+#contact-enquiries {
+
+    padding: 82px 0 88px;
+
+    background: #F7F9FC;
+
+}
+
+
+.contact-enquiries-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 55px;
+
+    align-items: start;
+
+}
+
+
+/* ==========================================================
+   CONTACT INFORMATION
+========================================================== */
+
+.contact-information {
+
+    padding-top: 10px;
+
+}
+
+
+.contact-information .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+}
+
+
+.contact-information h2 {
+
+    margin: 0 0 18px;
+
+    color: #0B2E4F;
+
+    font-size: clamp(2rem, 3.5vw, 2.7rem);
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+}
+
+
+.contact-intro {
+
+    max-width: 520px;
+
+    margin: 0 0 35px;
+
+    color: #647482;
+
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   CONTACT DETAILS
+========================================================== */
+
+.contact-detail-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.contact-detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+}
+
+
+.contact-detail-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex: 0 0 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D9E2E9;
+
+    border-radius: 8px;
+
+    color: #1E4E8C;
+
+}
+
+
+.contact-detail-icon img {
+
+    width: 26px;
+
+    height: 26px;
+
+    object-fit: contain;
+
+}
+
+
+.contact-detail-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.contact-detail-label {
+
+    color: #7A8996;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+}
+
+
+.contact-detail-content a,
+.contact-detail-content>span:last-child {
+
+    color: #0B2E4F;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+}
+
+
+.contact-detail-content a:hover {
+
+    color: #1E4E8C;
+
+}
+
+
+/* ==========================================================
+   CONTACT NOTE
+========================================================== */
+
+.contact-information-note {
+
+    display: flex;
+
+    align-items: stretch;
+
+    max-width: 540px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E0E6EC;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+}
+
+
+.contact-note-accent {
+
+    flex: 0 0 4px;
+
+    background: var(--accent);
+
+}
+
+
+.contact-information-note p {
+
+    margin: 0;
+
+    padding: 18px 20px;
+
+    color: #687987;
+
+    font-size: 0.8rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==========================================================
+   CONTACT FORM CARD
+========================================================== */
+
+.contact-form-card {
+
+    padding: 35px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E1E7ED;
+
+    border-top: 4px solid var(--accent);
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(11, 46, 79, 0.06);
+
+}
+
+
+.contact-form-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #C8A34D;
+
+    font-size: 0.63rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.contact-form-card h3 {
+
+    margin: 0 0 27px;
+
+    color: #0B2E4F;
+
+    font-size: 1.55rem;
+
+    line-height: 1.25;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   FORM LAYOUT
+========================================================== */
+
+.contact-form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.contact-form-group {
+
+    margin-bottom: 19px;
+
+}
+
+
+.contact-form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #354A5B;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+}
+
+
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #D8E0E7;
+
+    border-radius: 6px;
+
+    background: #FFFFFF;
+
+    color: #243B4D;
+
+    font-family: var(--body-font);
+
+    font-size: 0.83rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+
+    color: #A0ABB4;
+
+}
+
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+
+    border-color: #1E4E8C;
+
+    box-shadow: 0 0 0 3px rgba(30, 78, 140, 0.10);
+
+}
+
+
+.contact-form-group textarea {
+
+    min-height: 125px;
+
+    resize: vertical;
+
+}
+
+
+/* ==========================================================
+   SUBMIT BUTTON
+========================================================== */
+
+.contact-submit-button {
+
+    margin-top: 4px;
+
+    background: #1E4E8C;
+
+    border: 2px solid #1E4E8C;
+
+    color: #FFFFFF;
+
+}
+
+
+.contact-submit-button:hover,
+.contact-submit-button:focus,
+.contact-submit-button:active {
+
+    background: #124E78;
+
+    border-color: #124E78;
+
+    color: #FFFFFF;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-enquiries-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+    .contact-information {
+
+        max-width: 700px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #contact-enquiries {
+
+        padding: 60px 0;
+
+    }
+
+    .contact-form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+    .contact-form-card {
+
+        padding: 27px 22px;
+
+    }
+
+    .contact-information h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .contact-intro {
+
+        font-size: 0.86rem;
+
+    }
+
+}

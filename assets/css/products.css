@@ -1,0 +1,2200 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   PART 1 — PRODUCTS HERO
+========================================================== */
+
+.products-hero-section {
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(7, 35, 59, 0.96) 0%,
+            rgba(7, 35, 59, 0.88) 45%,
+            rgba(7, 35, 59, 0.48) 100%);
+
+    color: #FFFFFF;
+}
+
+.products-hero-container {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.products-hero-content {
+    max-width: 650px;
+}
+
+.products-hero-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.products-hero-content h1 {
+    margin-bottom: 24px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    line-height: 1.08;
+
+    letter-spacing: -0.025em;
+}
+
+.products-hero-intro {
+    max-width: 590px;
+
+    margin-bottom: 32px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 1.04rem;
+    line-height: 1.8;
+}
+
+.products-hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.products-hero-actions .btn {
+    min-height: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.products-hero-actions .btn:hover,
+.products-hero-actions .btn:focus,
+.products-hero-actions .btn:active {
+    border-color: rgba(255, 255, 255, 0.80);
+}
+
+
+/* ==========================================================
+   HERO VISUAL
+========================================================== */
+
+.products-hero-visual {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.products-hero-image {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.products-hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(135deg,
+            rgba(11, 46, 79, 0.08),
+            rgba(11, 46, 79, 0.30));
+
+    pointer-events: none;
+}
+
+.products-hero-image img {
+    display: block;
+
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   HERO STATUS CARD
+========================================================== */
+
+.products-hero-status {
+    position: absolute;
+
+    left: 0px;
+    bottom: -100px;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: stretch;
+
+    width: min(470px, 90%);
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 14px;
+
+    background: rgba(11, 46, 79, 0.92);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.24);
+
+    backdrop-filter: blur(8px);
+}
+
+.products-hero-status .hero-status-accent {
+    width: 5px;
+
+    flex-shrink: 0;
+
+    background: var(--accent);
+}
+
+.products-hero-status .hero-status-content {
+    padding: 20px 24px;
+}
+
+.products-hero-status .hero-status-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #FFFFFF;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.products-hero-status .hero-status-text {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   PART 2 — OUR PRODUCT PORTFOLIO
+========================================================== */
+
+.product-portfolio-section {
+    padding: 105px 0 110px;
+
+    background: #FFFFFF;
+}
+
+
+.product-portfolio-header {
+    max-width: 780px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.product-portfolio-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+
+.product-portfolio-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+}
+
+
+.product-portfolio-header p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   PRODUCT GRID
+========================================================== */
+
+.product-portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+.product-portfolio-card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100%;
+
+    border: 1px solid rgba(18, 59, 93, 0.10);
+
+    border-radius: 16px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 10px 35px rgba(18, 59, 93, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.product-portfolio-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 45%;
+
+    height: 4px;
+
+    background: var(--accent);
+}
+
+
+.product-portfolio-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(18, 59, 93, 0.11);
+}
+
+
+.product-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px 28px 15px;
+}
+
+
+.product-card-number {
+    color: var(--accent);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+.product-card-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.product-card-icon img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+}
+
+
+.product-card-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 8px 28px 30px;
+}
+
+
+.product-card-label {
+    margin-bottom: 8px;
+
+    color: var(--green);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+
+.product-card-content h3 {
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 1.55rem;
+
+    line-height: 1.25;
+}
+
+
+.product-card-content>p {
+    margin-bottom: 22px;
+
+    color: var(--text-muted);
+
+    font-size: 0.91rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   THERAPEUTIC SEGMENTS
+========================================================== */
+
+.product-card-group {
+    margin-bottom: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(18, 59, 93, 0.09);
+}
+
+
+.product-card-group-title {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: var(--primary);
+
+    font-size: 0.66rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.product-card-group ul {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 7px 18px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.product-card-group li {
+    position: relative;
+
+    padding-left: 13px;
+
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+.product-card-group li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0.62em;
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+}
+
+
+/* ==========================================================
+   PRODUCT FORMS
+========================================================== */
+
+.product-card-forms {
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(18, 59, 93, 0.09);
+}
+
+
+.product-form-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.product-form-tags span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(60, 125, 75, 0.22);
+
+    border-radius: 30px;
+
+    background: rgba(60, 125, 75, 0.055);
+
+    color: var(--green);
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   ADVANCED CAPABILITY HIGHLIGHT
+========================================================== */
+
+.product-capability-highlight {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 45px;
+
+    align-items: center;
+
+    margin-top: 55px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 18px 45px rgba(18, 59, 93, 0.14);
+}
+
+
+.product-capability-accent {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: var(--accent);
+}
+
+
+.product-capability-content {
+    padding: 40px 0 40px 42px;
+}
+
+
+.product-capability-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+.product-capability-content h3 {
+    max-width: 650px;
+
+    margin-bottom: 13px;
+
+    color: #FFFFFF;
+
+    font-size: 1.65rem;
+
+    line-height: 1.3;
+}
+
+
+.product-capability-content p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.73);
+
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+}
+
+
+.product-capability-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 35px 40px;
+}
+
+
+.product-capability-icon {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 105px;
+
+    text-align: center;
+}
+
+
+.product-capability-icon img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+}
+
+
+.product-capability-icon span {
+    color: #FFFFFF;
+
+    font-size: 0.66rem;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   PART 3 — THERAPEUTIC AREAS
+========================================================== */
+
+.therapeutic-areas-section {
+    padding: 105px 0 110px;
+
+    background: #F7F9FA;
+}
+
+
+.therapeutic-areas-header {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.therapeutic-areas-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+
+.therapeutic-areas-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+}
+
+
+.therapeutic-areas-header p {
+    max-width: 660px;
+
+    margin: 0 auto;
+
+    color: var(--text-muted);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   THERAPEUTIC GRID
+========================================================== */
+
+.therapeutic-areas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.therapeutic-area-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    min-height: 150px;
+
+    padding: 25px 23px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(18, 59, 93, 0.09);
+
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 7px 25px rgba(18, 59, 93, 0.055);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.therapeutic-area-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 65px;
+    height: 3px;
+
+    background: var(--accent);
+}
+
+
+.therapeutic-area-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(18, 59, 93, 0.09);
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.therapeutic-area-icon {
+    flex-shrink: 0;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.therapeutic-area-icon img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.therapeutic-area-content {
+    flex: 1;
+}
+
+
+.therapeutic-area-content h3 {
+    margin-bottom: 7px;
+
+    color: var(--primary);
+
+    font-size: 1.02rem;
+
+    line-height: 1.3;
+}
+
+
+.therapeutic-area-content p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   PART 4 — MANUFACTURING & PRODUCT CAPABILITY
+========================================================== */
+
+.product-manufacturing-section {
+    padding: 105px 0 110px;
+
+    background: #FFFFFF;
+}
+
+
+.product-manufacturing-header {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.product-manufacturing-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+
+.product-manufacturing-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+}
+
+
+.product-manufacturing-header p {
+    max-width: 660px;
+
+    margin: 0 auto;
+
+    color: var(--text-muted);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   MANUFACTURING BLOCK GRID
+========================================================== */
+
+.product-manufacturing-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.product-manufacturing-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 390px;
+
+    padding: 25px 22px 24px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(18, 59, 93, 0.10);
+
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 8px 28px rgba(18, 59, 93, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.product-manufacturing-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 65px;
+    height: 3px;
+
+    background: var(--accent);
+}
+
+
+.product-manufacturing-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 38px rgba(18, 59, 93, 0.10);
+}
+
+
+.product-manufacturing-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.product-manufacturing-number {
+    color: var(--accent);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+.product-manufacturing-block {
+    color: var(--green);
+
+    font-size: 0.59rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+/* ==========================================================
+   MANUFACTURING BLOCK IMAGE
+========================================================== */
+
+.product-manufacturing-icon {
+    width: 100%;
+    height: 175px;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(18, 59, 93, 0.10);
+
+    background: #F3F6F8;
+}
+
+.product-manufacturing-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.product-manufacturing-card h3 {
+    margin-bottom: 11px;
+
+    color: var(--primary);
+
+    font-size: 1.25rem;
+
+    line-height: 1.3;
+}
+
+
+.product-manufacturing-card p {
+    margin-bottom: 20px;
+
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   PRODUCT FORMS
+========================================================== */
+
+.product-manufacturing-forms {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: auto;
+
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(18, 59, 93, 0.09);
+}
+
+
+.product-manufacturing-forms span {
+    display: inline-flex;
+
+    padding: 5px 8px;
+
+    border: 1px solid rgba(60, 125, 75, 0.20);
+
+    border-radius: 20px;
+
+    background: rgba(60, 125, 75, 0.05);
+
+    color: var(--green);
+
+    font-size: 0.61rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   CTA LINK
+========================================================== */
+
+.product-manufacturing-link {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+/* ==========================================================
+   PART 5 — FUTURE PRODUCT DEVELOPMENT
+========================================================== */
+
+.future-product-section {
+    position: relative;
+
+    padding: 105px 0 110px;
+
+    background:
+        linear-gradient(180deg,
+            #F7F9FA 0%,
+            #FFFFFF 100%);
+}
+
+
+.future-product-header {
+    max-width: 780px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.future-product-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+
+.future-product-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+}
+
+
+.future-product-header p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: var(--text-muted);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   DEVELOPMENT ROADMAP
+========================================================== */
+
+.future-product-roadmap {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/*
+   Connecting line between the three development stages.
+*/
+
+.future-product-roadmap::before {
+    content: "";
+
+    position: absolute;
+
+    top: 57px;
+    left: 14%;
+
+    width: 72%;
+    height: 1px;
+
+    background:
+        linear-gradient(90deg,
+            rgba(200, 163, 77, 0),
+            rgba(200, 163, 77, 0.7),
+            rgba(200, 163, 77, 0));
+
+    z-index: 0;
+}
+
+
+.future-product-card {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 390px;
+
+    padding: 28px 26px 27px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(18, 59, 93, 0.10);
+
+    border-radius: 16px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 9px 30px rgba(18, 59, 93, 0.065);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.future-product-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 42%;
+
+    height: 4px;
+
+    background: var(--accent);
+}
+
+
+.future-product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 17px 40px rgba(18, 59, 93, 0.10);
+}
+
+
+/* ==========================================================
+   NUMBER
+========================================================== */
+
+.future-product-number {
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.future-product-icon {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.future-product-icon img {
+    width: 56px;
+    height: 56px;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.future-product-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--green);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+
+.future-product-card h3 {
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 1.35rem;
+
+    line-height: 1.3;
+}
+
+
+.future-product-card p {
+    margin-bottom: 22px;
+
+    color: var(--text-muted);
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   FOCUS TAGS
+========================================================== */
+
+.future-product-focus {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(18, 59, 93, 0.09);
+}
+
+
+.future-product-focus span {
+    display: inline-flex;
+
+    padding: 6px 9px;
+
+    border: 1px solid rgba(60, 125, 75, 0.20);
+
+    border-radius: 20px;
+
+    background: rgba(60, 125, 75, 0.05);
+
+    color: var(--green);
+
+    font-size: 0.64rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   FEATURED CARD
+========================================================== */
+
+.future-product-featured {
+    border-color: rgba(200, 163, 77, 0.35);
+
+    box-shadow:
+        0 12px 38px rgba(18, 59, 93, 0.09);
+}
+
+
+.future-product-featured::after {
+    width: 100%;
+
+    background: var(--accent);
+}
+
+
+/* ==========================================================
+   LONG TERM STATEMENT
+========================================================== */
+
+.future-product-statement {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 5px 1fr;
+
+    margin-top: 55px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 15px 40px rgba(18, 59, 93, 0.12);
+}
+
+
+.future-product-statement-accent {
+    background: var(--accent);
+}
+
+
+.future-product-statement-content {
+    padding: 34px 40px;
+}
+
+
+.future-product-statement-content>span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--accent);
+
+    font-size: 0.66rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+.future-product-statement-content h3 {
+    max-width: 750px;
+
+    margin-bottom: 12px;
+
+    color: #FFFFFF;
+
+    font-size: 1.55rem;
+
+    line-height: 1.3;
+}
+
+
+.future-product-statement-content p {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.86rem;
+
+    line-height: 1.75;
+}
+
+/* ==========================================================
+   PART 7 — PRODUCTS CTA
+========================================================== */
+
+.products-cta-section {
+    position: relative;
+
+    padding: 95px 0 100px;
+
+    overflow: hidden;
+
+    background: var(--primary);
+}
+
+
+/* Subtle architectural accent */
+
+.products-cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 42%;
+    height: 100%;
+
+    background:
+        linear-gradient(135deg,
+            transparent 0%,
+            rgba(200, 163, 77, 0.08) 100%);
+
+    pointer-events: none;
+}
+
+
+.products-cta-section::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--accent);
+}
+
+
+.products-cta-content {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.products-cta-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.products-cta-content h2 {
+    margin-bottom: 20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.2rem, 4vw, 3.25rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+}
+
+
+.products-cta-content p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.74);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   CTA BUTTONS
+========================================================== */
+
+.products-cta-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 34px;
+}
+
+
+/*
+   Use the site's established blue button rather than
+   introducing yellow or white primary buttons.
+*/
+
+.products-cta-actions .btn-primary {
+    background: var(--corporate-blue);
+
+    border: 2px solid rgba(255, 255, 255, 0.55);
+
+    color: #FFFFFF;
+}
+
+.products-cta-actions .btn-primary:hover {
+    background: #0E4267;
+
+    border-color: rgba(255, 255, 255, 0.80);
+
+    color: #FFFFFF;
+}
+
+
+/* Secondary blue button */
+
+.products-cta-actions .btn-secondary {
+    background: #FFFFFF;
+
+    border-color: #FFFFFF;
+
+    color: var(--corporate-blue);
+}
+
+
+.products-cta-actions .btn-secondary:hover {
+    background: #F3F6F8;
+
+    border-color: #F3F6F8;
+
+    color: var(--corporate-blue);
+}
+
+
+/* Outline button */
+
+.products-cta-actions .btn-outline-light {
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    color: #FFFFFF;
+}
+
+.products-cta-actions .btn-outline-light:hover {
+    background: #DCEEFF;
+
+    border-color: #DCEEFF;
+
+    color: var(--corporate-blue);
+}
+
+/* ==========================================================
+   PRODUCTS PAGE — GOLD ACCENT NORMALISATION
+   All card accents run across the complete card width.
+========================================================== */
+
+.product-portfolio-card::after,
+.therapeutic-area-card::before,
+.product-manufacturing-card::before,
+.future-product-card::after {
+    width: 100%;
+}
+
+/* ==========================================================
+   PRODUCTS PAGE — SECTION SPACING
+========================================================== */
+
+.product-portfolio-section,
+.therapeutic-areas-section,
+.product-manufacturing-section,
+.future-product-section {
+    padding-top: 72px;
+    padding-bottom: 78px;
+}

@@ -1,0 +1,2505 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   TAIFA PHARMACEUTICAL
+   MANUFACTURING PAGE
+   PART 1 — HERO + VISION
+=========================================================== */
+
+
+/* ==========================================================
+   MANUFACTURING HERO
+=========================================================== */
+
+#manufacturing-hero {
+    position: relative;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0B2E4F;
+    color: #FFFFFF;
+}
+
+.manufacturing-hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.manufacturing-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.manufacturing-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(6, 24, 42, 0.94) 0%,
+            rgba(6, 24, 42, 0.82) 34%,
+            rgba(6, 24, 42, 0.42) 67%,
+            rgba(6, 24, 42, 0.16) 100%);
+}
+
+.manufacturing-hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.15) 1px,
+            transparent 1px);
+
+    background-size: 72px 72px;
+
+    mask-image: linear-gradient(90deg,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.3),
+            transparent);
+}
+
+.manufacturing-hero-container {
+    position: relative;
+    z-index: 2;
+    min-height: 680px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.manufacturing-hero-content {
+    max-width: 820px;
+}
+
+.manufacturing-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    color: #FFFFFF;
+    letter-spacing: 0.18em;
+}
+
+.manufacturing-hero-label::before {
+    content: "";
+    width: 38px;
+    height: 2px;
+    display: inline-block;
+    background: #C8A34D;
+}
+
+.manufacturing-hero-content h1 {
+    margin: 0 0 28px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(3.4rem, 6vw, 6.2rem);
+    line-height: 1.03;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+
+    color: #FFFFFF;
+}
+
+.manufacturing-hero-intro {
+    max-width: 680px;
+
+    margin: 0 0 38px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 1.18rem;
+    line-height: 1.8;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.manufacturing-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    margin-top: 98px;
+}
+
+.manufacturing-hero-actions .btn {
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.manufacturing-hero-actions .btn-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-outline-light:hover {
+    background: #FFFFFF;
+    color: #0B2E4F;
+}
+
+
+/* ==========================================================
+   MANUFACTURING HERO
+   INFORMATION CARD
+=========================================================== */
+
+/* ==========================================================
+   MANUFACTURING HERO
+   INFORMATION CARD
+=========================================================== */
+
+.manufacturing-hero-status {
+    width: fit-content;
+    max-width: 100%;
+
+    display: flex;
+    align-items: stretch;
+
+    margin-top: 34px;
+    padding: 16px 24px 16px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+
+    background: rgba(8, 31, 52, 0.68);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+.hero-status-accent {
+    width: 4px;
+    min-height: 42px;
+
+    margin-right: 18px;
+
+    background: #C8A34D;
+
+    border-radius: 3px;
+}
+
+.hero-status-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hero-status-label {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.72rem;
+    line-height: 1.2;
+
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    color: #FFFFFF;
+}
+
+.hero-status-text {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.88rem;
+    line-height: 1.4;
+
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-status-text span {
+    color: #C8A34D;
+    padding: 0 5px;
+}
+
+
+/* ==========================================================
+   MANUFACTURING VISION
+=========================================================== */
+
+#manufacturing-vision {
+    position: relative;
+    padding: 125px 0;
+    background: #FFFFFF;
+}
+
+.manufacturing-vision-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    gap: 90px;
+    align-items: center;
+}
+
+.manufacturing-vision-media {
+    position: relative;
+}
+
+.vision-image-frame {
+    position: relative;
+    overflow: hidden;
+    background: #F5F7FA;
+}
+
+.vision-image {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.7s ease;
+}
+
+.vision-image-frame:hover .vision-image {
+    transform: scale(1.025);
+}
+
+.vision-image-caption {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 36px;
+    padding: 18px 20px;
+
+    background: #0B2E4F;
+    border-left: 4px solid #C8A34D;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(15, 39, 71, 0.08);
+}
+
+.vision-caption-line {
+    width: 3px;
+    height: 42px;
+    flex: 0 0 auto;
+    background: #C8A34D;
+}
+
+.vision-caption-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    color: #C8A34D;
+}
+
+.vision-caption-text {
+    display: block;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.45;
+
+    color: #FFFFFF;
+}
+
+.manufacturing-vision-content {
+    max-width: 620px;
+}
+
+.manufacturing-vision-content .section-label {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.manufacturing-vision-content h2 {
+    margin: 0 0 30px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(2.5rem, 4vw, 4.1rem);
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+
+    color: #0B2E4F;
+}
+
+.manufacturing-vision-content p {
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.82;
+
+    color: #2F3A45;
+}
+
+.manufacturing-vision-content .vision-lead {
+    margin-bottom: 24px;
+
+    font-size: 1.13rem;
+    line-height: 1.75;
+    font-weight: 500;
+
+    color: #124E78;
+}
+
+.vision-principles {
+    margin-top: 42px;
+    border-top: 1px solid #E3E8ED;
+}
+
+.vision-principle {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #E3E8ED;
+}
+
+.vision-principle-number {
+    padding-top: 3px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+
+    color: #C8A34D;
+}
+
+.vision-principle h3 {
+    margin: 0 0 7px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.35;
+    font-weight: 600;
+
+    color: #0B2E4F;
+}
+
+.vision-principle p {
+    margin: 0;
+
+    font-size: 0.88rem;
+    line-height: 1.65;
+
+    color: #5A6672;
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+=========================================================== */
+
+.manufacturing-hero-actions a:focus-visible,
+.vision-image-frame:focus-visible {
+    outline: 3px solid #C8A34D;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+=========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vision-image {
+        transition: none;
+    }
+
+}
+
+/* ==========================================================
+   PART 2 — BIRD'S-EYE MASTER PLAN
+=========================================================== */
+
+#master-plan {
+    padding: 85px 0 95px;
+    background: #F5F7FA;
+}
+
+
+/* ==========================================================
+   MASTER PLAN HEADER
+=========================================================== */
+
+.master-plan-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.master-plan-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    font-family: var(--body-font);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--secondary);
+}
+
+.master-plan-header h2 {
+    margin-bottom: 22px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+    line-height: 1.18;
+}
+
+.master-plan-header p {
+    max-width: 760px;
+    margin: 0 auto;
+
+    color: #66788A;
+
+    font-size: 1.08rem;
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   MASTER PLAN VISUAL
+=========================================================== */
+
+.master-plan-visual {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(11, 46, 79, 0.10);
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 39, 71, 0.12);
+}
+
+.master-plan-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #FFFFFF;
+}
+
+.master-plan-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   MASTER PLAN INFORMATION
+=========================================================== */
+
+.master-plan-information {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 70px;
+
+    margin-top: 75px;
+}
+
+.master-plan-intro {
+    padding-top: 8px;
+}
+
+.master-plan-kicker {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    color: var(--accent);
+}
+
+.master-plan-intro h3 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.master-plan-intro p {
+    color: #66788A;
+
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   MASTER PLAN FEATURES
+=========================================================== */
+
+.master-plan-features {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+.master-plan-feature {
+    display: grid;
+
+    grid-template-columns: 52px 1fr;
+
+    gap: 20px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid rgba(11, 46, 79, 0.12);
+}
+
+.master-plan-feature:first-child {
+    padding-top: 0;
+}
+
+.master-plan-feature:last-child {
+    border-bottom: none;
+}
+
+.master-plan-feature-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+
+    color: var(--primary);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.master-plan-feature h4 {
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: 1.08rem;
+}
+
+.master-plan-feature p {
+    margin-bottom: 0;
+
+    color: #66788A;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+/* ==========================================================
+   PART 4 — UTILITIES & INFRASTRUCTURE
+=========================================================== */
+
+.utilities-section {
+    position: relative;
+
+    padding: 85px 0 95px;
+
+    background: #FFFFFF;
+}
+
+
+/* ==========================================================
+   SECTION HEADER
+=========================================================== */
+
+.utilities-header {
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.utilities-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--secondary);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.utilities-header h2 {
+    margin-bottom: 22px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+    line-height: 1.18;
+}
+
+.utilities-header p {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #66788A;
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   MASTER PLAN
+=========================================================== */
+
+.utilities-masterplan {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(11, 46, 79, 0.10);
+    border-radius: 18px;
+
+    background: #F5F7FA;
+
+    box-shadow:
+        0 25px 60px rgba(15, 39, 71, 0.10);
+}
+
+.utilities-masterplan-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #FFFFFF;
+}
+
+.utilities-masterplan-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(135deg,
+            rgba(11, 46, 79, 0.02),
+            transparent 45%,
+            rgba(200, 163, 77, 0.06));
+}
+
+.utilities-masterplan-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.utilities-masterplan-caption {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-top: 24px;
+    padding: 24px 30px;
+
+    border: 1px solid rgba(11, 46, 79, 0.14);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 10px 30px rgba(15, 39, 71, 0.06);
+}
+
+.utilities-masterplan-caption span {
+    flex: 0 0 auto;
+
+    color: var(--accent);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+.utilities-masterplan-caption p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #66788A;
+
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   UTILITY GRID
+=========================================================== */
+
+.utilities-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+
+    margin-top: 65px;
+}
+
+.utility-card {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 58px 1fr;
+
+    gap: 22px;
+
+    min-height: 225px;
+
+    padding: 32px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(11, 46, 79, 0.11);
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 12px 35px rgba(15, 39, 71, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.utility-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: var(--accent);
+}
+
+.utility-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 45px rgba(15, 39, 71, 0.11);
+}
+
+.utility-card-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+
+    color: var(--secondary);
+
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.utility-card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.utility-card-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--secondary);
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.utility-card h3 {
+    margin-bottom: 14px;
+
+    color: var(--primary);
+
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.utility-card p {
+    margin: 0;
+
+    color: #66788A;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+/* ==========================================================
+   PART 3 — FACILITY FLYTHROUGH
+========================================================== */
+
+.facility-flythrough {
+    position: relative;
+
+    margin-bottom: 80px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(11, 46, 79, 0.12);
+    border-radius: 16px;
+
+    background: #0B2E4F;
+
+    box-shadow:
+        0 20px 50px rgba(15, 39, 71, 0.12);
+}
+
+.facility-flythrough-media {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 520px;
+
+    background: #0B2E4F;
+}
+
+.facility-video {
+    display: block;
+
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+
+    background: #0B2E4F;
+}
+
+.facility-video-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 70px 45px 40px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(11, 46, 79, 0) 0%,
+            rgba(11, 46, 79, 0.88) 75%,
+            rgba(11, 46, 79, 0.96) 100%);
+
+    pointer-events: none;
+}
+
+.facility-video-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.facility-video-overlay h3 {
+    max-width: 700px;
+
+    margin-bottom: 10px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.facility-video-overlay p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   PART 3 — PRODUCTION BLOCKS
+========================================================== */
+
+.production-blocks-section {
+    padding: 85px 0 95px;
+    background: #FFFFFF;
+}
+
+
+/* ==========================================================
+   PRODUCTION BLOCKS HEADER
+========================================================== */
+
+.production-blocks-header {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.production-blocks-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--secondary);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.production-blocks-header h2 {
+    margin-bottom: 22px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+    line-height: 1.18;
+}
+
+.production-blocks-header p {
+    max-width: 760px;
+    margin: 0 auto;
+
+    color: #66788A;
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   PRODUCTION BLOCKS GRID
+========================================================== */
+
+.production-blocks-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+
+/* ==========================================================
+   PRODUCTION BLOCK CARD
+========================================================== */
+
+.production-block-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(11, 46, 79, 0.11);
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 15px 40px rgba(15, 39, 71, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.production-block-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 22px 50px rgba(15, 39, 71, 0.12);
+}
+
+
+/* ==========================================================
+   PRODUCTION BLOCK IMAGE
+========================================================== */
+
+.production-block-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #F5F7FA;
+}
+
+.production-block-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.5s ease;
+}
+
+.production-block-card:hover .production-block-image img {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================================
+   PRODUCTION BLOCK NUMBER
+========================================================== */
+
+.production-block-number {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: var(--primary);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   PRODUCTION BLOCK CONTENT
+========================================================== */
+
+.production-block-content {
+    padding: 30px;
+}
+
+.production-block-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--secondary);
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.production-block-content h3 {
+    margin-bottom: 14px;
+
+    color: var(--primary);
+
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.production-block-content p {
+    margin-bottom: 20px;
+
+    color: #66788A;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+.production-block-link {
+    display: inline-block;
+
+    padding-bottom: 5px;
+
+    border-bottom: 2px solid var(--accent);
+
+    color: var(--primary);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   SITE MOVEMENT
+=========================================================== */
+
+.site-movement-block {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+    margin-top: 100px;
+
+    padding: 55px;
+
+    border-radius: 16px;
+
+    background: #F5F7FA;
+}
+
+.site-movement-content .section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--secondary);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.site-movement-content h3 {
+    margin-bottom: 18px;
+
+    color: var(--primary);
+
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.site-movement-content p {
+    margin: 0;
+
+    color: #66788A;
+
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+.site-movement-visual {
+    overflow: hidden;
+
+    border: 1px solid rgba(11, 46, 79, 0.10);
+    border-radius: 12px;
+
+    background: #FFFFFF;
+}
+
+.site-movement-visual img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.5s ease;
+}
+
+.site-movement-block:hover .site-movement-visual img {
+    transform: scale(1.02);
+}
+
+/* ==========================================================
+   PART 5 — TECHNOLOGY & FUTURE GROWTH
+========================================================== */
+
+.technology-future-section {
+    padding: 85px 0 95px;
+
+    background: #FFFFFF;
+}
+
+
+/* ==========================================================
+   TECHNOLOGY HEADER
+========================================================== */
+
+.technology-header {
+    max-width: 850px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.technology-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--secondary);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.technology-header h2 {
+    margin-bottom: 22px;
+
+    color: var(--primary);
+
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+    line-height: 1.18;
+}
+
+.technology-header p {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #66788A;
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   TECHNOLOGY SHOWCASE
+========================================================== */
+
+.technology-showcase {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+    padding: 55px;
+
+    border-radius: 18px;
+
+    background: #F5F7FA;
+}
+
+.technology-showcase-content .technology-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--secondary);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.technology-showcase-content h3 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: 2.2rem;
+    line-height: 1.25;
+}
+
+.technology-showcase-content p {
+    margin-bottom: 18px;
+
+    color: #66788A;
+
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+.technology-showcase-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   EQUIPMENT SHOWCASE
+========================================================== */
+
+.technology-showcase-visual {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.technology-equipment-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 245px;
+
+    border: 1px solid rgba(11, 46, 79, 0.12);
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 12px 30px rgba(15, 39, 71, 0.07);
+}
+
+.technology-equipment-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 245px;
+
+    object-fit: cover;
+}
+
+.technology-equipment-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45%;
+
+    background:
+        linear-gradient(180deg,
+            transparent,
+            rgba(11, 46, 79, 0.92));
+}
+
+.technology-equipment-card span {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    color: #FFFFFF;
+
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   TECHNOLOGY PRINCIPLES
+========================================================== */
+
+.technology-principles {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 55px;
+}
+
+.technology-principle-card {
+    position: relative;
+
+    padding: 32px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(11, 46, 79, 0.11);
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 10px 30px rgba(15, 39, 71, 0.06);
+}
+
+.technology-principle-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--accent);
+}
+
+.technology-principle-number {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+.technology-principle-card h3 {
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 1.2rem;
+}
+
+.technology-principle-card p {
+    margin: 0;
+
+    color: #66788A;
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   FUTURE GROWTH
+========================================================== */
+
+.future-growth {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    margin-top: 65px;
+
+    padding-top: 70px;
+
+    border-top: 1px solid rgba(11, 46, 79, 0.10);
+}
+
+
+/* ==========================================================
+   FUTURE GROWTH VISUAL
+========================================================== */
+
+.future-growth-visual {
+    min-height: 390px;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(135deg,
+            #0B2E4F,
+            #123E63);
+
+    box-shadow:
+        0 20px 50px rgba(15, 39, 71, 0.14);
+}
+
+.future-growth-frame {
+    position: relative;
+
+    width: 100%;
+    height: 330px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+}
+
+/* Current campus indicator */
+
+.future-growth-marker {
+    position: absolute;
+
+    padding: 8px 12px;
+
+    border-radius: 4px;
+
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.future-growth-marker.current {
+    left: 10%;
+    top: 28%;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    color: #FFFFFF;
+}
+
+
+/* Future area indicator */
+
+.future-growth-marker.expansion {
+    right: 8%;
+    bottom: 22%;
+
+    background: rgba(200, 163, 77, 0.15);
+
+    border: 1px solid var(--accent);
+
+    color: #FFFFFF;
+}
+
+
+/* Connection line */
+
+.future-growth-line {
+    position: absolute;
+
+    left: 30%;
+    top: 52%;
+
+    width: 40%;
+
+    border-top: 1px dashed var(--accent);
+
+    transform: rotate(-18deg);
+
+    transform-origin: left center;
+}
+
+.future-growth-caption {
+    position: absolute;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   FUTURE GROWTH CONTENT
+========================================================== */
+
+.future-growth-content .section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--secondary);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.future-growth-content h3 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+
+    font-size: 2.2rem;
+    line-height: 1.25;
+}
+
+.future-growth-content p {
+    margin-bottom: 18px;
+
+    color: #66788A;
+
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+
+.future-growth-note {
+    color: var(--primary);
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+}
+
+/* ==========================================================
+   PART 6 — MANUFACTURING CALL TO ACTION
+========================================================== */
+
+.manufacturing-cta-section {
+    position: relative;
+
+    padding: 85px 0 95px;
+
+    overflow: hidden;
+
+    background: #0B2E4F;
+
+    color: #FFFFFF;
+}
+
+.manufacturing-cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 42%;
+    height: 100%;
+
+    background:
+        linear-gradient(135deg,
+            transparent 0%,
+            rgba(200, 163, 77, 0.06) 100%);
+
+    pointer-events: none;
+}
+
+.manufacturing-cta-section::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 1px;
+    height: 100%;
+
+    background:
+        linear-gradient(180deg,
+            transparent,
+            rgba(200, 163, 77, 0.28),
+            transparent);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+.manufacturing-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.manufacturing-cta-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.manufacturing-cta-content h2 {
+    max-width: 780px;
+
+    margin: 0 auto 24px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.4rem, 4.5vw, 3.7rem);
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+.manufacturing-cta-content p {
+    max-width: 700px;
+
+    margin: 0 auto 38px;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.manufacturing-cta-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.manufacturing-cta-actions .btn {
+    min-height: 54px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.manufacturing-cta-actions .btn-primary {
+    background: var(--primary);
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    color: #FFFFFF;
+}
+
+.manufacturing-cta-actions .btn-primary:hover {
+    background: var(--secondary);
+    border-color: rgba(255, 255, 255, 0.80);
+    color: #FFFFFF;
+}
+
+.manufacturing-cta-actions .btn-outline-light {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: #FFFFFF;
+}
+
+.manufacturing-cta-actions .btn-outline-light:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #FFFFFF;
+}
+
+/* ==========================================================
+   FINAL SECTION SPACING — MANUFACTURING PAGE
+   ========================================================== */
+
+#section-id-1,
+#section-id-2,
+#section-id-3,
+#section-id-4 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+/* ==========================================================
+   FINAL MANUFACTURING PAGE POLISH
+   REDUCED SECTION WHITESPACE
+========================================================== */
+
+/* Manufacturing Vision */
+#manufacturing-vision {
+    padding: 80px 0;
+}
+
+/* Master Plan */
+#master-plan {
+    padding: 65px 0 75px;
+}
+
+/* Production Blocks */
+.production-blocks-section {
+    padding: 65px 0 75px;
+}
+
+/* Utilities & Infrastructure */
+.utilities-section {
+    padding: 65px 0 75px;
+}
+
+/* Technology & Future Growth */
+.technology-future-section {
+    padding: 65px 0 75px;
+}
+
+/* Final CTA */
+.manufacturing-cta-section {
+    padding: 70px 0 80px;
+}
+
+/* ==========================================================
+   FACILITY VIDEO — PLAY AFFORDANCE
+========================================================== */
+
+.facility-video {
+    background: #0B2E4F;
+}
+
+.facility-video-overlay {
+    pointer-events: none;
+}
+
+.facility-video-play {
+    position: relative;
+    z-index: 3;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 28px;
+    padding: 13px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+
+    background: rgba(11, 46, 79, 0.88);
+    color: #FFFFFF;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+    pointer-events: auto;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.facility-video-play:hover {
+    background: #124E78;
+    border-color: #C8A34D;
+    transform: translateY(-2px);
+}
+
+.facility-video-play-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background: #C8A34D;
+    color: #0B2E4F;
+}
+
+.facility-video-play-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.facility-video-overlay.is-playing .facility-video-play {
+    display: none;
+}

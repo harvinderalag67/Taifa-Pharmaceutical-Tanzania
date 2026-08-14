@@ -1,0 +1,762 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Chairman's Message Page
+========================================================== */
+
+
+/* ==========================================================
+   PAGE HEADER
+========================================================== */
+
+#chairman-message-page {
+    padding: 90px 0 100px;
+    background: #FFFFFF;
+}
+
+
+/* ==========================================================
+   MESSAGE HEADER
+========================================================== */
+
+.chairman-message-header {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.chairman-message-header .section-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.chairman-message-header h1 {
+    margin-bottom: 18px;
+}
+
+.chairman-intro {
+    margin: 0;
+    color: var(--grey);
+    font-size: 1.05rem;
+}
+
+
+/* ==========================================================
+   MAIN MESSAGE LAYOUT
+========================================================== */
+
+.chairman-message-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 70px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+
+/* ==========================================================
+   CHAIRMAN PROFILE
+========================================================== */
+
+.chairman-profile {
+    position: sticky;
+    top: 125px;
+}
+
+.chairman-profile-card {
+    background: #FFFFFF;
+    border: 1px solid #E3E9EF;
+    border-top: 5px solid var(--accent);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(15, 39, 71, .08);
+}
+
+.chairman-profile-card img {
+    width: 100%;
+    height: auto;
+}
+
+.chairman-profile-details {
+    padding: 24px;
+    text-align: center;
+}
+
+.chairman-profile-details h3 {
+    margin-bottom: 6px;
+}
+
+.chairman-profile-details p {
+    margin-bottom: 4px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.chairman-profile-details span {
+    color: var(--grey);
+    font-size: .9rem;
+}
+
+
+/* ==========================================================
+   MESSAGE CONTENT
+========================================================== */
+
+.chairman-message-content {
+    max-width: 760px;
+}
+
+.chairman-message-content p {
+    margin-bottom: 24px;
+    color: var(--dark);
+    font-size: 1.02rem;
+    line-height: 1.85;
+}
+
+.chairman-message-content>p:first-child {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+
+/* ==========================================================
+   GUIDING PHILOSOPHY
+========================================================== */
+
+.chairman-philosophy {
+    margin: 45px 0;
+    padding: 32px 36px;
+    background: #F7F9FC;
+    border: 1px solid #E0E6EC;
+    border-left: 5px solid var(--accent);
+    border-radius: 14px;
+}
+
+.chairman-philosophy span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--accent);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.chairman-philosophy blockquote {
+    margin: 0;
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   CLOSING STATEMENT
+========================================================== */
+
+.chairman-closing {
+    margin: 45px 0;
+    padding: 32px 36px;
+    background: #F7F9FC;
+    border: 1px solid #E0E6EC;
+    border-left: 5px solid var(--accent);
+    border-radius: 14px;
+}
+
+.chairman-closing p {
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.chairman-closing strong {
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-size: 1.45rem;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   SIGNATURE
+========================================================== */
+
+.chairman-signature {
+    margin-top: 50px;
+}
+
+.signature-line {
+    width: 80px;
+    height: 3px;
+    margin-bottom: 18px;
+    background: var(--accent);
+}
+
+.chairman-signature h3 {
+    margin-bottom: 5px;
+}
+
+.chairman-signature span {
+    color: var(--grey);
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media screen and (max-width: 992px) {
+
+    .chairman-message-layout {
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: 45px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #chairman-message-page {
+        padding: 70px 0 80px;
+    }
+
+    .chairman-message-header {
+        margin-bottom: 45px;
+    }
+
+    .chairman-message-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .chairman-profile {
+        position: static;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .chairman-message-content {
+        max-width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .chairman-message-header h1 {
+        font-size: 2rem;
+    }
+
+    .chairman-message-content p {
+        font-size: .98rem;
+        line-height: 1.8;
+    }
+
+    .chairman-philosophy,
+    .chairman-closing {
+        padding: 26px;
+    }
+
+    .chairman-philosophy blockquote,
+    .chairman-closing strong {
+        font-size: 1.2rem;
+    }
+
+}

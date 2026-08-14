@@ -2,18 +2,23 @@
    TAIFA PHARMACEUTICAL TANZANIA LTD.
    Animation Stylesheet
 
-   Version : 1.0
+   Version : 1.1
 
    This file contains ONLY animation styles.
-
    ========================================================== */
 
 
 /* ==========================================================
-   TRANSITIONS
+   GLOBAL TRANSITIONS
 ========================================================== */
 
-* {
+a,
+button,
+.btn,
+img,
+input,
+textarea,
+select {
     transition:
         color .3s ease,
         background-color .3s ease,
@@ -29,26 +34,17 @@
 ========================================================== */
 
 .fade-in {
-
     animation: fadeIn 1s ease forwards;
-
 }
 
-
 @keyframes fadeIn {
-
     from {
-
         opacity: 0;
-
     }
 
     to {
-
         opacity: 1;
-
     }
-
 }
 
 
@@ -57,30 +53,19 @@
 ========================================================== */
 
 .fade-up {
-
     animation: fadeUp .8s ease forwards;
-
 }
 
-
 @keyframes fadeUp {
-
     from {
-
         opacity: 0;
-
         transform: translateY(40px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
-
 }
 
 
@@ -89,30 +74,19 @@
 ========================================================== */
 
 .fade-left {
-
     animation: fadeLeft .8s ease forwards;
-
 }
 
-
 @keyframes fadeLeft {
-
     from {
-
         opacity: 0;
-
         transform: translateX(-40px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateX(0);
-
     }
-
 }
 
 
@@ -121,30 +95,19 @@
 ========================================================== */
 
 .fade-right {
-
     animation: fadeRight .8s ease forwards;
-
 }
 
-
 @keyframes fadeRight {
-
     from {
-
         opacity: 0;
-
         transform: translateX(40px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateX(0);
-
     }
-
 }
 
 
@@ -153,9 +116,7 @@
 ========================================================== */
 
 .btn:hover {
-
     transform: translateY(-3px);
-
 }
 
 
@@ -164,18 +125,14 @@
 ========================================================== */
 
 .card {
-
-    transition: all .35s ease;
-
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
-
 .card:hover {
-
     transform: translateY(-8px);
-
     box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
-
 }
 
 
@@ -184,23 +141,15 @@
 ========================================================== */
 
 .image-hover {
-
     overflow: hidden;
-
 }
-
 
 .image-hover img {
-
     transition: transform .5s ease;
-
 }
 
-
 .image-hover:hover img {
-
     transform: scale(1.05);
-
 }
 
 
@@ -209,61 +158,39 @@
 ========================================================== */
 
 nav a {
-
     position: relative;
-
 }
-
 
 nav a::after {
-
     content: "";
-
     position: absolute;
-
     left: 0;
-
     bottom: -6px;
-
     width: 0;
-
     height: 2px;
-
     background: var(--accent);
-
     transition: width .3s ease;
-
 }
 
-
 nav a:hover::after {
-
     width: 100%;
-
 }
 
 
 /* ==========================================================
-   SCROLL REVEAL
+   ACCESSIBILITY — REDUCED MOTION
 ========================================================== */
 
-.reveal {
+@media (prefers-reduced-motion: reduce) {
 
-    opacity: 0;
-
-    transform: translateY(40px);
-
-    transition: all .8s ease;
-
-}
-
-
-.reveal.active {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 

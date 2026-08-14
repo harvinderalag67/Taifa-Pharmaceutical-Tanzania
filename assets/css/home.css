@@ -1,0 +1,1804 @@
+/* ==========================================================
+   TAIFA PHARMACEUTICAL TANZANIA LTD.
+   Corporate Website
+
+   Version : 1.0
+   Author  : Harvinder Singh Alag
+   ========================================================== */
+
+
+/* ==========================================================
+   1. CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   2. ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    /* Brand Colours */
+
+    --primary: #0B2E4F;
+    --secondary: #124E78;
+    --accent: #C8A34D;
+
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+
+    --grey: #6B7280;
+
+    --dark: #1E293B;
+
+    --success: #2E7D32;
+
+    --border: #E5E7EB;
+
+    /* Typography */
+
+    --heading-font: 'Poppins', sans-serif;
+
+    --body-font: 'Inter', sans-serif;
+
+    /* Container */
+
+    --container-width: 1200px;
+
+    /* Transition */
+
+    --transition: all .30s ease;
+
+    /* Radius */
+
+    --radius: 10px;
+
+    /* Shadow */
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: var(--dark);
+
+    background: var(--white);
+
+}
+
+
+/* ==========================================================
+   4. TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+h1 {
+
+    font-size: 3.6rem;
+
+}
+
+h2 {
+
+    font-size: 2.6rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+
+}
+
+p {
+
+    margin-bottom: 20px;
+
+    color: var(--grey);
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==========================================================
+   5. CONTAINER
+========================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================================
+   6. SECTION
+========================================================== */
+
+section {
+
+    padding: 60px 0;
+
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--secondary);
+
+}
+
+.btn-outline {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+/*==========================================================
+  SECONDARY BUTTON
+==========================================================*/
+
+.btn-secondary {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: #FFFFFF;
+
+    border: 2px solid var(--primary);
+
+    padding: 15px 35px;
+
+    border-radius: var(--radius);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    margin-bottom: 0;
+}
+
+.top-bar {
+
+    background: var(--secondary);
+
+    color: var(--white);
+
+    font-size: .85rem;
+
+    padding: 10px 0;
+
+}
+
+.top-bar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.top-right {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+.top-right a {
+
+    color: var(--white);
+
+}
+
+.top-right a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+#navbar {
+
+    background: var(--white);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 90px;
+
+}
+
+.logo img {
+
+    height: 58px;
+
+    width: auto;
+
+}
+
+.nav-menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+.nav-menu a {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--accent);
+
+}
+
+/* ==========================================================
+   10. CARDS
+========================================================== */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================================
+   11. SECTION TITLES
+========================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+}
+
+
+/* ==========================================================
+   12. FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   13. UTILITY CLASSES
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-light {
+    background: var(--light);
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   HERO SECTION
+   Hero v2.0
+========================================================== */
+
+#hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 90px 0 70px;
+
+    isolation: isolate;
+
+    background: #0B2E4F;
+
+}
+
+
+/*----------------------------------------------------------
+BACKGROUND IMAGE
+----------------------------------------------------------*/
+
+#hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("../images/hero/hero-campus.jpg");
+
+    background-repeat: no-repeat;
+
+    background-position: right center;
+
+    background-size: 92% auto;
+
+    z-index: -2;
+
+}
+
+
+/*----------------------------------------------------------
+GRADIENT OVERLAY
+----------------------------------------------------------*/
+
+#hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+
+            rgba(11, 46, 79, .96) 0%,
+
+            rgba(11, 46, 79, .94) 18%,
+
+            rgba(11, 46, 79, .90) 35%,
+
+            rgba(11, 46, 79, .78) 48%,
+
+            rgba(11, 46, 79, .56) 60%,
+
+            rgba(11, 46, 79, .28) 72%,
+
+            rgba(11, 46, 79, .08) 84%,
+
+            rgba(11, 46, 79, 0) 100%);
+
+    z-index: -1;
+
+}
+
+
+/*----------------------------------------------------------
+CONTENT
+----------------------------------------------------------*/
+
+.hero-content {
+
+    position: relative;
+
+    max-width: 560px;
+
+    color: #FFFFFF;
+
+}
+
+
+.hero-content h1 {
+
+    color: #FFFFFF;
+
+    font-size: 3rem;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-content p {
+
+    color: rgba(255, 255, 255, .92);
+
+    font-size: 1.15rem;
+
+    line-height: 1.7;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+
+    text-align: left;
+
+}
+
+
+/*----------------------------------------------------------
+BADGES
+----------------------------------------------------------*/
+
+.hero-badges {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    width: 360px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-badge {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px 20px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, .10);
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.badge-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+}
+
+
+.hero-badge span {
+
+    color: #FFFFFF;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+}
+
+
+/*----------------------------------------------------------
+BUTTONS
+----------------------------------------------------------*/
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+}
+
+
+.hero-buttons .btn {
+
+    min-width: 210px;
+
+    justify-content: center;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px 28px;
+
+}
+
+
+.hero-buttons .btn-primary {
+    background: var(--primary);
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, .35);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .20);
+}
+
+.hero-buttons .btn-primary:hover {
+    background: var(--secondary);
+    border-color: rgba(255, 255, 255, .60);
+}
+
+
+.hero-buttons .btn-outline {
+
+    border: 2px solid rgba(255, 255, 255, .35);
+
+    color: #FFFFFF;
+
+    background: transparent;
+
+}
+
+
+.hero-buttons .btn-outline:hover {
+
+    background: #124E78;
+
+    border-color: #124E78;
+
+    color: #FFFFFF;
+
+}
+
+
+.btn-icon {
+
+    width: 22px;
+
+    height: 22px;
+
+}
+
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
+/* ==========================================================
+   COMPANY INTRODUCTION
+========================================================== */
+
+#company-introduction {
+
+    margin-top: -20px;
+
+    padding-top: 60px;
+
+    background: #FFFFFF;
+
+}
+
+.company-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+
+}
+
+/* ----------------------------------------------------------
+   LEFT COLUMN
+---------------------------------------------------------- */
+
+.company-content {
+
+    max-width: 680px;
+
+}
+
+.section-label {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #B89338;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+.company-content h2 {
+
+    color: #0F2747;
+
+    font-size: 2.8rem;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    margin-bottom: 28px;
+
+}
+
+.company-content p {
+
+    color: #4E5D6C;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+
+    text-align: justify;
+
+}
+
+/* ----------------------------------------------------------
+   STRATEGIC HIGHLIGHTS
+---------------------------------------------------------- */
+
+.company-highlights {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+    margin-top: 0;
+
+}
+
+.highlight-card {
+
+    background: #F7F9FC;
+
+    border-left: 5px solid #C8A34D;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow: 0 10px 28px rgba(15, 39, 71, .06);
+
+    transition: .35s ease;
+
+}
+
+.highlight-card:hover {
+
+    transform: translateX(-6px);
+
+    box-shadow: 0 20px 45px rgba(15, 39, 71, .10);
+
+}
+
+.highlight-card h3 {
+
+    color: #0F2747;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 10px;
+
+}
+
+.highlight-card p {
+
+    margin: 0;
+
+    color: #66788A;
+
+    font-size: .97rem;
+
+    line-height: 1.7;
+
+}
+
+.highlight-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    object-fit: contain;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ----------------------------------------------------------
+   BUTTON
+---------------------------------------------------------- */
+
+.company-content .btn {
+
+    margin-top: 18px;
+
+    min-width: 230px;
+
+}
+
+/* ----------------------------------------------------------
+   ANIMATION
+---------------------------------------------------------- */
+
+.company-content,
+.company-highlights {
+
+    opacity: 0;
+
+    animation: fadeHero .9s ease forwards;
+
+}
+
+/* ==========================================================
+   VISION & MISSION
+========================================================== */
+
+#vision-mission {
+
+    padding: 60px 0;
+
+    background: #F7F9FC;
+
+}
+
+.purpose-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+
+    margin-top: 40px;
+
+}
+
+.purpose-card {
+
+    background: #FFFFFF;
+
+    padding: 35px 30px;
+
+    border-radius: 22px;
+
+    border-top: 6px solid #C8A34D;
+
+    text-align: center;
+
+    box-shadow: 0 18px 45px rgba(15, 39, 71, .08);
+
+    transition: .35s ease;
+
+}
+
+.purpose-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 28px 55px rgba(15, 39, 71, .14);
+
+}
+
+.purpose-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 24px;
+}
+
+.purpose-card h3 {
+
+    color: #0B2E4F;
+
+    margin-bottom: 22px;
+
+    font-size: 1.55rem;
+
+}
+
+.purpose-card p {
+
+    color: #59697A;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    margin: 0;
+
+    text-align: justify;
+
+}
+
+#vision-mission .section-title {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    margin-bottom: 35px;
+
+}
+
+#vision-mission .section-title h2 {
+
+    margin: 20px 0;
+
+}
+
+#vision-mission .section-title p {
+
+    font-size: 1.08rem;
+
+    color: #66788A;
+
+}
+
+/*==========================================================
+  STRATEGIC IMPORTANCE
+==========================================================*/
+
+#strategic-importance {
+
+    padding: 60px 0;
+
+    background:
+
+        radial-gradient(circle at top right,
+            rgba(200, 163, 77, .05),
+            transparent 40%),
+
+        #FFFFFF;
+
+}
+
+#strategic-importance .section-title {
+
+    max-width: 780px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+#strategic-importance .section-title h2 {
+
+    margin: 18px 0 22px;
+
+}
+
+#strategic-importance .section-title p {
+
+    color: #66788A;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+}
+
+/*==========================================================
+  GRID
+==========================================================*/
+
+.importance-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+/*==========================================================
+  CARD
+==========================================================*/
+
+.importance-card {
+
+    background: #FFFFFF;
+
+    border-radius: 24px;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    border: 1px solid rgba(11, 46, 79, .08);
+
+    box-shadow: 0 12px 35px rgba(15, 39, 71, .06);
+
+    transition: all .35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.importance-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #C8A34D;
+
+}
+
+.importance-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 22px 45px rgba(15, 39, 71, .12);
+
+}
+
+/*==========================================================
+  ICON
+==========================================================*/
+
+.importance-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 24px;
+}
+
+/*==========================================================
+  TITLE
+==========================================================*/
+
+.importance-card h3 {
+
+    color: #0B2E4F;
+
+    font-size: 1.35rem;
+
+    margin-bottom: 18px;
+
+    font-weight: 700;
+
+}
+
+/*==========================================================
+  TEXT
+==========================================================*/
+
+.importance-card p {
+
+    color: #59697A;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+    margin: 0;
+
+}
+
+/*==========================================================
+  HOVER ICON
+==========================================================*/
+
+.importance-card:hover .importance-icon {
+
+    transform: scale(1.08);
+
+    transition: .3s ease;
+
+}
+
+/*==========================================================
+  RESPONSIVE
+==========================================================*/
+
+@media (max-width:992px) {
+
+    .importance-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .importance-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/*==========================================================
+  CHAIRMAN'S MESSAGE
+==========================================================*/
+
+#chairman-message {
+
+    padding: 60px 0;
+
+    background: #F7F9FC;
+
+}
+
+.chairman-grid {
+
+    display: grid;
+
+    grid-template-columns: 420px 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+/*==========================================================
+  PHOTO
+==========================================================*/
+
+.chairman-photo {
+
+    position: relative;
+
+}
+
+.chairman-photo img {
+
+    width: 100%;
+
+    max-width: 380px;
+
+    display: block;
+
+    border-radius: 24px;
+
+    border: 8px solid #FFFFFF;
+
+    box-shadow: 0 25px 60px rgba(15, 39, 71, .15);
+
+    transition: .35s ease;
+
+}
+
+.chairman-photo img:hover {
+
+    transform: scale(1.02);
+
+}
+
+/* Decorative gold frame */
+
+.chairman-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -18px;
+
+    border: 3px solid #C8A34D;
+
+    border-radius: 30px;
+
+    z-index: -1;
+
+}
+
+/*==========================================================
+  CONTENT
+==========================================================*/
+
+.chairman-content h2 {
+
+    color: #0B2E4F;
+
+    font-size: 2.5rem;
+
+    margin: 18px 0 35px;
+
+    line-height: 1.2;
+
+}
+
+.chairman-content blockquote {
+
+    font-size: 1.35rem;
+
+    color: #0B2E4F;
+
+    line-height: 1.7;
+
+    font-style: italic;
+
+    border-left: 5px solid #C8A34D;
+
+    padding-left: 28px;
+
+    margin-bottom: 35px;
+
+}
+
+.chairman-content p {
+
+    color: #5F7082;
+
+    line-height: 1.9;
+
+    font-size: 1.05rem;
+
+    text-align: justify;
+
+}
+
+.chairman-signature {
+
+    margin-top: 40px;
+
+}
+
+.chairman-signature h4 {
+
+    color: #0B2E4F;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 8px;
+
+}
+
+.chairman-signature span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #5B6B7C;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+}
+
+.signature-line {
+
+    width: 90px;
+
+    height: 3px;
+
+    background: #C8A34D;
+
+    margin-bottom: 18px;
+
+    border-radius: 5px;
+
+}
+
+.signature-btn {
+
+    margin-top: 28px;
+
+}
+
+/*==========================================================
+  RESPONSIVE
+==========================================================*/
+
+@media (max-width:992px) {
+
+    .chairman-grid {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .chairman-content blockquote {
+
+        border-left: none;
+
+        border-top: 4px solid #C8A34D;
+
+        padding-top: 25px;
+
+        padding-left: 0;
+
+    }
+
+}
+
+.chairman-button {
+
+    margin-top: 35px;
+
+}
+
+.chairman-button .btn {
+
+    min-width: 300px;
+
+}
+
+/*==========================================================
+  WHY TANZANIA
+==========================================================*/
+
+#why-tanzania {
+
+    padding: 60px 0;
+
+    background: #ffffff;
+
+}
+
+#why-tanzania .section-title {
+
+    max-width: 860px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+#why-tanzania .section-title p {
+
+    margin-top: 22px;
+
+    line-height: 1.8;
+
+}
+
+/*==========================================================
+  TANZANIA MAP
+==========================================================*/
+
+.tanzania-map {
+
+    text-align: center;
+
+    margin: 0 auto 80px;
+
+}
+
+.tanzania-map img {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 20px;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .10);
+
+}
+
+/*==========================================================
+  SUBSECTION TITLES
+==========================================================*/
+
+.subsection-title {
+
+    text-align: center;
+
+    color: #0B2E4F;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+.subsection-intro {
+
+    max-width: 780px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+    color: #607080;
+
+    line-height: 1.8;
+
+}
+
+/*==========================================================
+  MARKET INTELLIGENCE
+==========================================================*/
+
+.market-intelligence {
+
+    margin-bottom: 35px;
+
+}
+
+.market-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+.market-card {
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    border-top: 4px solid var(--accent);
+
+    padding: 35px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .06);
+
+    transition: .35s;
+
+}
+
+.market-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .12);
+
+}
+
+.market-card h4 {
+
+    color: #0B2E4F;
+
+    font-size: 1.45rem;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+}
+
+.market-card img {
+
+    width: 100%;
+
+    border-radius: 16px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #E8EDF3;
+
+}
+
+.market-card p {
+
+    color: #5F6E7D;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+/*==========================================================
+  INVESTMENT ADVANTAGES
+==========================================================*/
+
+.investment-advantages {
+
+    margin-top: 40px;
+
+}
+
+.advantages-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+
+    margin-top: 40px;
+
+}
+
+.reason-card {
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    border-left: 4px solid var(--accent);
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .06);
+
+    transition: .35s;
+
+}
+
+.reason-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 22px 50px rgba(0, 0, 0, .12);
+
+}
+
+.reason-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.reason-card h3 {
+
+    color: #0B2E4F;
+
+    font-size: 1.45rem;
+
+    margin-bottom: 18px;
+
+}
+
+.reason-card p {
+
+    color: #607080;
+
+    line-height: 1.8;
+
+}
+
+/*==========================================================
+  CTA BUTTON
+==========================================================*/
+
+#why-tanzania .section-button {
+
+    margin-top: 40px;
+
+    text-align: center;
+
+}
+
+#why-tanzania .btn {
+
+    min-width: 320px;
+
+}
+
+/*==========================================================
+  CLOSING STATEMENT
+==========================================================*/
+
+#closing-statement {
+
+    padding: 60px 0;
+
+    background: #0B2E4F;
+
+    color: #ffffff;
+
+}
+
+.closing-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.closing-content h2 {
+
+    color: #ffffff;
+
+    font-size: 2.8rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 35px;
+
+}
+
+.closing-content p {
+
+    color: rgba(255, 255, 255, .90);
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+
+}
+
+#closing-statement .btn {
+
+    min-width: 260px;
+
+}
+
+/* ==========================================================
+   CLOSING CTA — BUTTON CONSISTENCY
+========================================================== */
+
+#closing-statement .btn-primary {
+
+    border: 2px solid rgba(255, 255, 255, 0.55);
+
+}
+
+#closing-statement .btn-primary:hover,
+#closing-statement .btn-primary:focus,
+#closing-statement .btn-primary:active {
+
+    border-color: rgba(255, 255, 255, 0.80);
+
+}
+
+/* ==========================================================
+   FINAL SECTION SPACING — HOME PAGE
+   ========================================================== */
+
+#company-overview,
+#why-tanzania,
+#strategic-capital,
+#chairman-message,
+#vision-mission {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
